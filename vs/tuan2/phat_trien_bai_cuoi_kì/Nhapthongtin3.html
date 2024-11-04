@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="./Nhapthongtin3.css">
+</head>
+<body>
+
+
+    <div class = "menu-header">
+        <div class="container">
+            <div class="wrapper">
+                <nav class="menu">
+                    <div  class = "item ">
+                        <a href="./Nhapthongtin1.html"><p>Thông tin cá nhân</p></a>
+                    </div>
+                    <div class = "item ">
+                       <a href="./Nhapthongtin2.html"><p>Thông tin trường học</p></a>  
+                    </div>
+                    <div class = "item  active ">
+                        <a href="./Nhapthongtin3.html"><p>Thông tin liên hệ </p></a>
+                    </div>
+                    <div class = "item ">
+                        <a href="./Nhapthongtin4.html"><p>Thông tin đăng kí </p></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-container">
+        <!-- Previous form sections -->
+
+        <form action="#">
+            <fieldset>
+                <legend>THÔNG TIN LIÊN HỆ</legend>
+                <div class="form-group">
+                    <label for="contact-name">Họ và tên người liên hệ <span class="required">*</span></label>
+                    <input type="text" id="contact-name" name="contact-name" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Số điện thoại <span class="required">*</span></label>
+                    <input type="text" id="contact-phone" name="contact-phone" placeholder="03938389" required>
+                </div>
+                <div class="form-group">
+                    <label for="alt-phone">Số điện thoại khác (nếu có)</label>
+                    <input type="text" id="alt-phone" name="alt-phone" placeholder="9387490">
+                </div>
+                <div class="form-group">
+                    <label for="city">Tỉnh/Thành phố <span class="required">*</span></label>
+                    <select id="city" name="city" required>
+                        <option value="" disabled selected>Cần Thơ</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">Quận/Huyện <span class="required">*</span></label>
+                    <select id="district" name="district" required>
+                        <option value="" disabled selected>Quận Ninh Kiều</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ward">Phường/Xã <span class="required">*</span></label>
+                    <select id="ward" name="ward" required>
+                        <option value="" disabled selected>Phường An Hòa</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="street">Số nhà/tên đường <span class="required">*</span></label>
+                    <input type="text" id="street" name="street" placeholder="23/4 NVC" required>
+                </div>
+                <div class="form-group">
+                    <label for="full-address">Địa chỉ đầy đủ</label>
+                    <input type="text" id="full-address" name="full-address" placeholder="23/4 NVC - Phường An Hòa - Quận Ninh Kiều - Cần Thơ">
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="button" class="back-button" onclick="window.location.href='./Nhapthongtin2.html'">Quay lại</button>
+                <button type="submit" class="next-button">Bước tiếp theo</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

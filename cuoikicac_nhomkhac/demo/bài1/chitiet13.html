@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<title>Trang chi tiết 13</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: sans-serif;
+		}
+		.header{
+			background: #273030;
+			height: 55px;
+			color: white;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+		}
+		div i{
+			margin-left: 19px;
+		}
+		div a{
+			text-decoration: none;
+			color: white;
+		}
+		.h{
+			background: #e6df1c;
+			border: 2px solid white;
+			border-radius: 30px;
+			height: 50px;
+			width: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ad6e26;
+			margin-left: 30px;
+		}
+		.h1{
+			margin-left: 9px;
+		}
+		.a{
+			background: #ba2020;
+			height: 75px;
+			font-size: 23px;
+			font-weight: bold;
+			color: white;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.a1{
+			margin-left: 100px;
+
+		}
+		#a0{
+			position: relative;
+			left: -35px;
+			background: #fff;
+			border-radius: 30px;
+		}
+		p i{
+			position: relative;
+			left: -10px;
+		}
+        #a0 #a9{
+        	border: none;
+        	outline: none;
+        	background: none;
+        	font-size: 17px;
+        	width: 0px;
+        	padding: 0px;
+        	transition: 0.5s;
+        }
+         #a0:hover #a9{
+         	width: 300px;
+         	padding: 10px 15px;
+         }
+        #a0 #a2{
+        	background-color: #fff;
+        	cursor: pointer;
+        	border: none;
+        	padding:  13px 15px;
+        	border-radius: 30px;
+        }
+		.gt{
+			position: relative;
+			height: 80px;
+			width: 1200px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			left: 310px;
+
+		}
+		.gt1{
+            position: relative;
+			width: 1200px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.line{
+			width: 1200px;
+			height: 0.5px;
+			background: gray;
+			position: relative;
+			left: 335px;
+			top: -50px;
+		}
+		.ct1{
+			height: 1800px;
+
+		}
+		.ct1 img{
+			width: 1902px;
+			height: 700px;
+			filter: brightness(40%);
+		}
+		.ct11{
+			font-size: 43px;
+			color: white;
+			position: relative;
+			top: -100px;
+			font-weight: bold;
+			width: 1800px;
+			left: 40px;
+            text-shadow: 10px 6px 10px #aeb5b5;
+
+		}
+		.ct12{
+
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			font-size: 20px;
+			top: 10px;
+			left: 340px;
+			
+		}
+		.ct13{
+            position: relative;
+			width: 1200px;
+			top: 60px;
+			left: 340px;
+		}
+		.ct14{
+            position: relative;
+            top: 60px;
+			left: 340px;
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+		}
+		.ct14 img{
+			position: relative;
+			border: 1px solid white;
+			border-radius: 20px;
+			width: 800px;
+			height: 400px;
+			filter: brightness(100%);
+			top: 20px;
+
+		}
+		.ct15{
+            position: relative;
+            top: 90px;
+			left: 340px;
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+			font-style: italic;
+		}
+		
+		.ct17 img{
+			position: relative;
+			border: 1px solid white;
+			border-radius: 20px;
+			width: 800px;
+			height: 400px;
+			filter: brightness(100%);
+			left: 540px;
+			top: 130px;
+
+		}
+		.ct18{
+            position: relative;
+            top: 135px;
+			left: 680px;
+			width: 700px;
+			font-style: italic;
+		}
+        .ct19{
+            position: relative;
+            top: 110px;
+			left: 340px;
+			width: 1200px;
+			justify-content: center;
+		}
+		
+		.ct2{
+			height: 650px;
+			width: 780px;
+
+		}
+		.ct21{
+			font-size: 26px;
+			font-weight: bold;
+			position: relative;
+			top: 35px;
+			left: 290px;
+		}
+		.ct22{
+			position: relative;
+			top: 25px;
+			left: 435px;
+			display: flex;
+            align-content: space-around;
+            justify-content: space-between;
+            width: 980px;
+
+		}
+		.ct23{
+			position: relative;
+			top: 70px;
+			left: 435px;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-between;
+            width: 980px;
+		}
+		.d{
+			position: relative;
+			width: 460px;
+			top: 30px;
+			border: 1px solid white;
+			border-radius: 25px;
+			height: 230px;
+            
+
+		}
+		.d:hover{
+			
+			box-shadow: 2px 4px 6px rgba(0, 0, 0, .5);
+			transition: 0.5s;
+
+
+		}
+		.d img{
+			border: 1px solid white;
+			border-radius: 25px;
+			width: 460px;
+			height: 230px;
+			filter: brightness(50%);
+		}
+
+		.d1{
+			position: relative;
+			color: white;
+			font-weight: bold;
+			font-size: 22px;
+			text-align: center;
+			top: -80px;
+			left: 29px;
+			width: 420px;
+
+
+		}
+		.cmt{
+			height: 400px;
+			width: 780px;
+		}
+		.cmt1{
+			font-size: 30px;
+			font-weight: bold;
+			position: relative;
+			top: 80px;
+			left: 290px;
+
+		}
+		.cmt2{
+			position: relative;
+			width: 780px;
+			height: 80px;
+			left: 400px;
+			top: 120px;
+		}
+		.cmt3{
+			position: relative;
+			width: 60px;
+			height: 60px;
+			align-content: center;
+			border: 1px solid white;
+			border-radius: 40px;
+			background: gray;
+			color: white;
+			font-size: 30px;
+		}
+		#cmt8 #a7{
+			position: relative;
+			background-color: #273030;
+			color: white;
+        	cursor: pointer;
+        	border: none;
+        	padding:  13px 15px;
+        	border-radius: 30px;
+        	font-size: 20px;
+        	top: -100px;
+        	left: 930px;
+		}
+		.cmt2 input{
+			position: relative;
+			left: 100px;
+			top: -55px;
+			width: 800px;
+			height: 40px;
+			font-size: 19px;
+			border: 1px solid black;
+			border-radius: 15px;
+
+		}
+		.like{
+			display: flex;
+			width: 780px;
+			height: 80px;
+			justify-content: space-between;
+		}
+		.cmt4{
+			position: relative;
+			font-size: 26px;
+			font-weight: bold;
+			left: 290px;
+			top: 200px;
+		}
+		.cmt5{
+			position: relative;
+			font-size: 27px;
+			font-weight: bold;
+			left: 290px;
+			top: 160px;
+
+		}
+		.cmn1{
+			position: relative;
+			left: 30px;
+		}
+		#cmn #cmt0{
+			position: relative;
+			top: 210px;
+			left: 300px;
+        	cursor: pointer;
+        	border: none;
+        	padding:  13px 15px;
+        	border-radius: 30px;
+        	font-size: 30px;
+		}
+		.like i{
+			position: relative;
+			left: -6px;
+		}
+		.footer{
+			height: 200px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+			background: #434545;
+		}
+		.f0{
+			width: 70px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			border: 1px solid white;
+			border-radius: 50px;
+			background: gray;
+			color: white;
+			font-size: 40px;
+		}
+		.f0:hover{
+			width: 70px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			border: 1px solid white;
+			border-radius: 50px;
+			background: #d42811;
+			color: white;
+			font-size: 40px;
+		}
+		.f1{
+            border: 1px solid white;
+            border-radius: 15px;
+            background: gray;
+            width: 95px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+		}
+		.f1:hover{
+            border: 1px solid white;
+            border-radius: 15px;
+            background: #afb0a2;
+            width: 95px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+		}
+    </style>
+		
+</head>
+<body>
+	<div class="cha">
+		<div class="header">
+			<i class="fa-solid fa-user"></i><a href="dangki.html"><p class="h1">Sign up</p></a>
+			<i class="fa-regular fa-user"></i><a href="dangnhap.html"><p class="h1">Sign in</p></a>
+		</div>
+		<div class="a">
+			<a href="index.html"><p class="h">C&H</p></a>
+			<a href="index.html"><p class="a1">HOME</p></a>
+			<a href="post.html"><p class="a1">POST</p></a>
+			<a href="tranglienhe.html"><p class="a1">CONTACT US</p></a>
+			<p id="a0"><input type="text" placeholder="Bạn đang tìm gì?" id="a9"><button id="a2"><i class="fa-solid fa-magnifying-glass"></i></button></p>
+		</div>
+		<div class="ct1">
+			<img src="j14.jpg">
+			<p class="ct11">"Thần đồng" Yamal tỏa sáng khiến Barcelona đau đầu: Tăng lương để giữ ngôi sao</p>
+			<div class="gt">
+				<div class="gt1">
+					<p class="gt11">edit by C&H</p>
+					<p class="gt11">Friday 11 July 2024 10:30</p>
+				</div>
+				
+			</div>
+			<div class="line"></div>
+			<p class="ct12">Màn trình diễn chói sáng của Lamine Yamal tại EURO 2024 lại trở thành "cơn đau đầu" không hề dễ chịu với đội bóng chủ quản Barcelona.</p>
+			<p class="ct13">Lamine Yamal đang có những bước tiến vượt bậc trong sự nghiệp. Dù mới bước qua tuổi 17 nhưng tài năng trẻ người Tây Ban Nha đã bỏ túi danh hiệu nhà vô địch châu Âu. Điều quan trọng hơn là Yamal đóng góp quan trọng trong thành công của ĐT Tây Ban Nha tại EURO 2024. </p>
+			
+			<p class="ct14"><img src="j14.jpg"></p>
+			<p class="ct15">Lamine Yamal trở thành "cơn đau đầu" của Barcelona</p>
+			<p class="ct19">Đi cùng với thành công là sự nổi tiếng, tên tuổi của Yamal nhanh chóng được đưa lên tầm cao mới. Theo giới truyền thông Tây Ban Nha, số áo 19 của tài năng trẻ này đã bán hết veo ngay sau khi Barcelona mở bán trang phục thi đấu mùa giải mới. Yamal đang trở thành biểu tượng mới của sân Nou Camp.<br>
+Tuy nhiên, chính sự phát triển nhanh chóng của Yamal lại trở thành cơn đau đầu của Barcelona. Vài tuần qua, người đại diện của cầu thủ này, Jorge Mendes liên tục yêu cầu đội chủ sân Nou Camp điều chỉnh hợp đồng để “phù hợp với diễn biến của tình hình mới”.<br>
+Yamal đã ký hợp đồng có thời hạn 3 năm với Barcelona khi bước sang tuổi 16. Đội bóng xứ Catalunya cũng rất cẩn thận khi cài điều khoản phá vỡ hợp đồng lên tới 1 tỷ euro. Nhận thấy tài năng của Yamal, đội chủ sân Nou Camp cũng trả mức lương khá tốt so với cầu thủ trẻ là 2 triệu euro/năm (cả thưởng).<br>
+Vấn đề nằm ở chỗ danh tiếng của Yamal đã tăng vượt bậc chỉ sau 1 năm. Bởi vậy, Jorge Mendes cảm thấy mức lương này không còn phù hợp với thân chủ của mình nữa. Hiện tại chưa rõ con số mà “siêu cò” người Bồ Đào Nha đưa ra nhưng giới chuyên môn dự đoán mức lương mới của Yamal sẽ rơi vào khoảng 8-10 triệu euro (tương đương với Gavi, Pedri).<br>
+Barcelona không có nhiều lựa chọn bởi đến tháng 1/2026 là Yamal có quyền tự do tìm bến đỗ mới. Nghe thì có vẻ rất xa nhưng câu chuyện giữa Mbappe và PSG là ví dụ tiêu biểu cho việc quá chậm chạp trong khâu gia hạn. Đội chủ sân Nou Camp đương nhiên là không muốn mắc sai lầm ấy.<br>
+Thực ra Barcelona đang rơi vào thế khó trong vụ việc này. Việc tăng lương cho Yamal là hợp lý nhưng nếu tài năng trẻ người Tây Ban Nha biến thành "Messi thứ hai", đội chủ sân Nou Camp sẽ phải điều chỉnh lương liên tục để giữ ngôi sao. Họ từng phải tăng lương ít nhất là 5 lần cho Messi trong vòng 5 năm (từ 17 đến 22 tuổi) và điều tương tự hoàn toàn có thể tới với Yamal.<br>Thế nhưng, Barcelona cần phải có danh hiệu để làm được điều đó. 5 mùa giải đầu tiên của Messi với đội chủ sân Nou Camp, họ có được 3 danh hiệu La Liga, 2 chức vô địch Champions League và Siêu cúp Tây Ban Nha, 1 lần đăng quang tại cúp nhà vua, Siêu cúp châu Âu và FIFA World Cup Club. Yamal khó lòng lặp lại thành tích ấy, nhưng Barcelona không tăng lương không được. </p>
+            
+		</div>
+		<div class="cmt">
+			<div class="cmt1">Đánh giá của bạn về bài viết:</div>
+			<div class="cmt2">
+				<div class="cmt3"><i class="fa-solid fa-user"></i></div><input type="text" name="" placeholder ="Bạn đang nghĩ gì..."><div id="cmt8"><button id="a7">Đăng</button></div></div>
+			<div class="like">
+				<div class="cmt5">Bạn có thích bài viết này không?</div>
+				<div class="cmn1">
+					<div class="cmt4">Thích</div>
+					<div id="cmn"><button id="cmt0"><i class="fa-solid fa-thumbs-up"></i></button></div>
+				</div>
+				<div class="cmn1">
+					<div class="cmt4">Không thích</div>
+					<div id="cmn"><button id="cmt0"><i class="fa-solid fa-thumbs-down"></i></button></div>
+				</div>
+			</div>
+		</div>
+		<div class="ct2">
+			<div class="ct21">TIN TỨC KHÁC :</div>
+			<div class="ct22">
+				<a href="chitiet5.html"><div class="d"><img src="6.png">
+					<p class="d1">Nhận định bóng đá Uruguay vs Colombia: Bổn cũ soạn lại</p>
+				    </div></a>
+				<a href="chitiet2.html"><div class="d"><img src="3.jpg">
+				    <p class="d1">Đường đến chung kết Euro 2024 của ĐT Anh</p>
+				   </div></a>
+				
+			</div>
+			<div class="ct23">
+				<a href="chitiet6.html"><div class="d"><img src="7.jpg">
+				    <p class="d1">LION Championship 15: Thử thách từ các ngoại binh</p>
+				    </div></a>
+				<a href="chitiet4.html"><div class="d"><img src="5.jpg">
+				    <p class="d1">Tuyển Mỹ "đón" ca chấn thương đầu tiên, nói lời chia tay với Kawhi Leonard</p>
+				    </div></a>
+			</div></div>
+		</div>
+        <div class="footer">
+			<div class="f0"><a href="https://www.facebook.com/linhhhchi.08"><i class="fa-brands fa-facebook"></i></a></div>
+			<div class="f0"><a href="https://www.instagram.com/linhhchi.102/"><i class="fa-brands fa-instagram"></i></a></div>
+			<div class="f0"><a href="https://www.threads.net/@linhhchi.102"><i class="fa-brands fa-threads"></i></a></div>
+			<div class="f0"><a href="https://www.tiktok.com/@lingchii200004"><i class="fa-brands fa-tiktok"></i></a></div>
+			<div class="f1"><a href="dangki.html">SIGN IN</a></div>
+			<div class="f1"><a href="dangnhap.html">SIGN UP</a></div>
+		</div>
+	</div>
+
+</body>
+</html>

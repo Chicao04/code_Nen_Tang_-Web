@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #d8dae0;
+      }
+
+      h1 {
+        color: #1e3a8a;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        border: 2px solid #1e40af;
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: bold;
+        color: #1e3a8a;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border: 1px solid #93c5fd;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      input[type="text"]:focus {
+        border-color: #1e3a8a;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+        accent-color: #1e3a8a;
+      }
+
+      select {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border: 1px solid #93c5fd;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      select:focus {
+        border-color: #1e3a8a;
+      }
+
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: #2563eb;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 1.5rem;
+      }
+
+      button:hover {
+        background-color: #1e40af;
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body id = "body">
+    <!-- mã màu: #e0e7ff, red, yellow, green  -->
+    <form action="">
+      <label for="backgroundSelect">Thay đổi màu nền</label>
+      <select onchange="" name="" id="backgroundSelect">
+        <option value="default">Mặc định</option>
+        <option value="red" id = "i1">Màu đỏ</option>
+        <option value="yellow" id = "i2">Màu vàng</option>
+        <option value = "green" id = "i3" >Màu xanh</option>
+      </select>
+    </form>
+    <script>
+      // document.getElementById('backgroundSelect').onchange = function(){
+      //   const body = document.getElementsByTagName('body')[0];
+      //   const color = this.value; 
+      //   if (color ===" default"){
+      //     body.style.backgroundColor = "#ffffff";
+      //   }
+      //   else{
+      //     body.style.backgroundColor = color; 
+      //   }
+      // }
+
+        var color = document.getElementById('backgroundSelect');
+        document.getElementById('backgroundSelect').onclick = function(){
+          document.getElementById('body').style.backgroundColor = color.value;
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Ranking Form</title>
+    <link rel="stylesheet" href="./Nhapthonghocba.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="#">
+            <div class="form-header">
+                <button type="button" class="tab active" onclick="showTab('tab1')">XẾP HẠNG THEO HỌC BẠ THPT</button>
+                <button type="button" class="tab" onclick="showTab('tab2')">XẾP HẠNG THEO KẾT QUẢ THI THPT</button>
+            </div>
+
+            <!-- Tab 1: Academic Transcript Scores -->
+            <div id="tab1" class="tab-content">
+                <!-- Scores for Semester 1, Grade 10 -->
+                <fieldset class="scores">
+                    <legend>ĐIỂM LỚP 10 (HK1)</legend>
+                    <div class="form-group">
+                        <label for="math_thpt">Toán:</label>
+                        <input type="number" id="math_thpt" name="math_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="physics_thpt">Vật lý:</label>
+                        <input type="number" id="physics_thpt" name="physics_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chemistry_thpt">Hóa học:</label>
+                        <input type="number" id="chemistry_thpt" name="chemistry_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="biology_thpt">Sinh học:</label>
+                        <input type="number" id="biology_thpt" name="biology_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="literature_thpt">Ngữ văn:</label>
+                        <input type="number" id="literature_thpt" name="literature_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="history_thpt">Lịch sử:</label>
+                        <input type="number" id="history_thpt" name="history_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="geography_thpt">Địa lý:</label>
+                        <input type="number" id="geography_thpt" name="geography_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foreign_language_thpt">Ngoại ngữ:</label>
+                        <input type="number" id="foreign_language_thpt" name="foreign_language_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="civic_thpt">GDCD:</label>
+                        <input type="number" id="civic_thpt" name="civic_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <!-- Add other subjects similarly -->
+                </fieldset>
+
+                <!-- Scores for Semester 2, Grade 10 -->
+                <fieldset class="scores">
+                    <legend>ĐIỂM LỚP 10 (HK2)</legend>
+                    <div class="form-group">
+                        <label for="math_thpt">Toán:</label>
+                        <input type="number" id="math_thpt" name="math_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="physics_thpt">Vật lý:</label>
+                        <input type="number" id="physics_thpt" name="physics_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chemistry_thpt">Hóa học:</label>
+                        <input type="number" id="chemistry_thpt" name="chemistry_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="biology_thpt">Sinh học:</label>
+                        <input type="number" id="biology_thpt" name="biology_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="literature_thpt">Ngữ văn:</label>
+                        <input type="number" id="literature_thpt" name="literature_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="history_thpt">Lịch sử:</label>
+                        <input type="number" id="history_thpt" name="history_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="geography_thpt">Địa lý:</label>
+                        <input type="number" id="geography_thpt" name="geography_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foreign_language_thpt">Ngoại ngữ:</label>
+                        <input type="number" id="foreign_language_thpt" name="foreign_language_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="civic_thpt">GDCD:</label>
+                        <input type="number" id="civic_thpt" name="civic_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <!-- Add other subjects similarly -->
+                </fieldset>
+
+                <!-- Scores for Semester 1, Grade 11 -->
+                <fieldset class="scores">
+                    <legend>ĐIỂM LỚP 11 (HK1)</legend>
+                    <div class="form-group">
+                        <label for="math_thpt">Toán:</label>
+                        <input type="number" id="math_thpt" name="math_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="physics_thpt">Vật lý:</label>
+                        <input type="number" id="physics_thpt" name="physics_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chemistry_thpt">Hóa học:</label>
+                        <input type="number" id="chemistry_thpt" name="chemistry_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="biology_thpt">Sinh học:</label>
+                        <input type="number" id="biology_thpt" name="biology_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="literature_thpt">Ngữ văn:</label>
+                        <input type="number" id="literature_thpt" name="literature_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="history_thpt">Lịch sử:</label>
+                        <input type="number" id="history_thpt" name="history_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="geography_thpt">Địa lý:</label>
+                        <input type="number" id="geography_thpt" name="geography_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foreign_language_thpt">Ngoại ngữ:</label>
+                        <input type="number" id="foreign_language_thpt" name="foreign_language_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="civic_thpt">GDCD:</label>
+                        <input type="number" id="civic_thpt" name="civic_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <!-- Add other subjects similarly -->
+                </fieldset>
+
+                <!-- Scores for Semester 2, Grade 11 -->
+                <fieldset class="scores">
+                    <legend>ĐIỂM LỚP 11 (HK2)</legend>
+                    <div class="form-group">
+                        <label for="math_thpt">Toán:</label>
+                        <input type="number" id="math_thpt" name="math_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="physics_thpt">Vật lý:</label>
+                        <input type="number" id="physics_thpt" name="physics_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chemistry_thpt">Hóa học:</label>
+                        <input type="number" id="chemistry_thpt" name="chemistry_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="biology_thpt">Sinh học:</label>
+                        <input type="number" id="biology_thpt" name="biology_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="literature_thpt">Ngữ văn:</label>
+                        <input type="number" id="literature_thpt" name="literature_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="history_thpt">Lịch sử:</label>
+                        <input type="number" id="history_thpt" name="history_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="geography_thpt">Địa lý:</label>
+                        <input type="number" id="geography_thpt" name="geography_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foreign_language_thpt">Ngoại ngữ:</label>
+                        <input type="number" id="foreign_language_thpt" name="foreign_language_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="civic_thpt">GDCD:</label>
+                        <input type="number" id="civic_thpt" name="civic_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <!-- Add other subjects similarly -->
+                </fieldset>
+
+                <!-- Scores for Semester 1, Grade 12 -->
+                <fieldset class="scores">
+                    <legend>ĐIỂM LỚP 12 (HK1)</legend>
+                    <div class="form-group">
+                        <label for="math_thpt">Toán:</label>
+                        <input type="number" id="math_thpt" name="math_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="physics_thpt">Vật lý:</label>
+                        <input type="number" id="physics_thpt" name="physics_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chemistry_thpt">Hóa học:</label>
+                        <input type="number" id="chemistry_thpt" name="chemistry_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="biology_thpt">Sinh học:</label>
+                        <input type="number" id="biology_thpt" name="biology_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="literature_thpt">Ngữ văn:</label>
+                        <input type="number" id="literature_thpt" name="literature_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="history_thpt">Lịch sử:</label>
+                        <input type="number" id="history_thpt" name="history_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="geography_thpt">Địa lý:</label>
+                        <input type="number" id="geography_thpt" name="geography_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foreign_language_thpt">Ngoại ngữ:</label>
+                        <input type="number" id="foreign_language_thpt" name="foreign_language_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="civic_thpt">GDCD:</label>
+                        <input type="number" id="civic_thpt" name="civic_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <!-- Add other subjects similarly -->
+                </fieldset>
+            </div>
+
+            <!-- Tab 2: High School Graduation Exam Scores -->
+            <div id="tab2" class="tab-content" style="display: none;">
+                <fieldset class="scores">
+                    <legend>ĐIỂM TRUNG HỌC PHỔ THÔNG</legend>
+                    <div class="form-group">
+                        <label for="math_thpt">Toán:</label>
+                        <input type="number" id="math_thpt" name="math_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="physics_thpt">Vật lý:</label>
+                        <input type="number" id="physics_thpt" name="physics_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chemistry_thpt">Hóa học:</label>
+                        <input type="number" id="chemistry_thpt" name="chemistry_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="biology_thpt">Sinh học:</label>
+                        <input type="number" id="biology_thpt" name="biology_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="literature_thpt">Ngữ văn:</label>
+                        <input type="number" id="literature_thpt" name="literature_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="history_thpt">Lịch sử:</label>
+                        <input type="number" id="history_thpt" name="history_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="geography_thpt">Địa lý:</label>
+                        <input type="number" id="geography_thpt" name="geography_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foreign_language_thpt">Ngoại ngữ:</label>
+                        <input type="number" id="foreign_language_thpt" name="foreign_language_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="civic_thpt">GDCD:</label>
+                        <input type="number" id="civic_thpt" name="civic_thpt" placeholder="0.0" step="0.1" required>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-button">XEM KẾT QUẢ</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+            document.getElementById(tabId).style.display = 'block';
+
+            var buttons = document.getElementsByClassName('tab');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

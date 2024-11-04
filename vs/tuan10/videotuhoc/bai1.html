@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+</head>
+<body>
+    <script>
+        // ý a 
+        var dsdiem = [9, 2, 8, 5, 4, 2, 8, 6, 5, 4];
+        console.log(dsdiem);
+        document.write(dsdiem + '<br>')
+        
+        // ý b 
+        var tdiem = 0; 
+        for (var i =0 ; i < dsdiem.length ; i++){
+            tdiem += dsdiem[i];
+        }
+        var diemTB = tdiem/dsdiem.length;
+        console.log("Điểm trung bình: "+diemTB); 
+        document.write("Điểm trung bình: "+diemTB + '<br>');
+        // ý c 
+        if (diemTB >= 5 ){
+            console.log("Đạt");
+            document.write("Đạt");
+        }
+        else {
+            console.log("Không Đạt")
+            document.write("Không Đạt")
+        }
+    </script>
+</body>
+</html>

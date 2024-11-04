@@ -1,0 +1,14 @@
+nav ul {  
+    list-style-type: none; /* Bỏ dấu chấm trước danh sách */  
+    padding: 0; /* Bỏ padding mặc định */  
+}  
+nav ul ul {  
+    display: none; /* Ẩn submenu */  
+    position: absolute; /* Đặt vị trí tuyệt đối */  
+}  
+nav ul li:hover > ul {  
+    display: block; /* Hiện submenu khi di chuột qua */  
+}  
+nav ul li {  
+    position: relative; /* Để submenu xuất hiện đúng vị trí */  
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e0e7ff;
+      }
+
+      h1 {
+        color: #1e3a8a;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        border: 2px solid #1e40af;
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: bold;
+        color: #1e3a8a;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border: 1px solid #93c5fd;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      input[type="text"]:focus {
+        border-color: #1e3a8a;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+        accent-color: #1e3a8a;
+      }
+
+      select {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border: 1px solid #93c5fd;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      select:focus {
+        border-color: #1e3a8a;
+      }
+
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: #2563eb;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 1.5rem;
+      }
+
+      button:hover {
+        background-color: #1e40af;
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form" action="">
+      <label for="">Họ tên</label>
+      <input type="text" name="hovaten" id="hoTen" />
+      <label for="">Giới tính</label>
+      Nam
+      <input type="radio" name="gioiTinh" id="Nam" value = "Nam" />
+      Nữ
+      <input type="radio" name="gioiTinh" id="Nữ" Value = "Nữ" />
+
+      <label for="">Sở thích </label>
+      Đá bóng
+      <input type="checkbox" name="soThich" id="daBong" value = "Đá bóng"/>
+      Nấu ăn
+      <input type="checkbox" name="soThich" id="nauAn" value = "Nấu ăn " />
+      Cầu lông
+      <input type="checkbox" name="soThich" id="cauLong" value = "Cầu lông" />
+
+      <label for="">Quê quán</label>
+      <select name="" id="diaChi">
+        <option>Hà Nội</option>
+        <option>Hà Nam</option>
+        <option>Long An</option>
+      </select>
+      <input type="button" id="btn" value="Gửi" />
+    </form>
+  </body>
+  <script type="text/javascript">
+    
+    document.getElementById('btn').onclick = function(){
+      var hoTen = document.getElementById('hoTen').value;
+      var gioiTinh = document.querySelector('input[name = "gioiTinh"]:checked');
+      var soThich = document.querySelectorAll('input[name = "soThich"]:checked');
+      var diaChi = document.getElementById('diaChi').value; 
+      var ArraysoThich = [];
+      soThich.forEach(function(item){
+          ArraysoThich.push(item.value)
+      });
+      if (gioiTinh){
+        alert("Ho ten: "+ hoTen +  "\nGiới Tính: " + gioiTinh.value + "\nSở Thích: " + ArraysoThich.join(",") + "\nĐịa chỉ: " + diaChi  )
+      } else {
+        alert("Vui lòng điền giới tính ")
+      }
+    }
+  </script>
+</html>

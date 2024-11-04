@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng quan về  HTML DOM</title>
+</head>
+<body>
+   <p id = "cntt">Chào mừng bạn đến với khoa công nghệ thông tin</p>
+   <p class = "hnue">Chào mừng bạn đến với Trường đại hộc SP Hà Nội</p>
+   <p class = "hnue">Chào mừng bạn đến với Trường đại hộc SP Hà Nội 2</p>
+    <script type="text/javascript">
+        // Chọn theo id 
+        var a =  document.getElementById('cntt');
+        
+        // Thêm element con 
+        // a.innerHTML = '<h1>Nền tảng phát triển web</h1>'
+        //Ghi đè Element con 
+        a.outerHTML = '<h1>Nền tảng phát triển web</h1>'
+
+       
+    </script>
+</body>
+</html>

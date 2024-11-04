@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<title>Trang chi tiết 6</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: sans-serif;
+		}
+		.header{
+			background: #273030;
+			height: 55px;
+			color: white;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+		}
+		div i{
+			margin-left: 19px;
+		}
+		div a{
+			text-decoration: none;
+			color: white;
+		}
+		.h{
+			background: #e6df1c;
+			border: 2px solid white;
+			border-radius: 30px;
+			height: 50px;
+			width: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ad6e26;
+			margin-left: 30px;
+		}
+		.h1{
+			margin-left: 9px;
+		}
+		.a{
+			background: #ba2020;
+			height: 75px;
+			font-size: 23px;
+			font-weight: bold;
+			color: white;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.a1{
+			margin-left: 100px;
+
+		}
+		#a0{
+			position: relative;
+			left: -35px;
+			background: #fff;
+			border-radius: 30px;
+		}
+		p i{
+			position: relative;
+			left: -10px;
+		}
+        #a0 #a9{
+        	border: none;
+        	outline: none;
+        	background: none;
+        	font-size: 17px;
+        	width: 0px;
+        	padding: 0px;
+        	transition: 0.5s;
+        }
+         #a0:hover #a9{
+         	width: 300px;
+         	padding: 10px 15px;
+         }
+        #a0 #a2{
+        	background-color: #fff;
+        	cursor: pointer;
+        	border: none;
+        	padding:  13px 15px;
+        	border-radius: 30px;
+        }
+		.gt{
+			position: relative;
+			height: 80px;
+			width: 1200px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			left: 310px;
+
+		}
+		.gt1{
+            position: relative;
+			width: 1200px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.line{
+			width: 1200px;
+			height: 0.5px;
+			background: gray;
+			position: relative;
+			left: 335px;
+			top: -50px;
+		}
+		.ct1{
+			height: 2650px;
+
+		}
+		.ct1 img{
+			width: 1902px;
+			height: 700px;
+			filter: brightness(40%);
+		}
+		.ct11{
+			font-size: 43px;
+			color: white;
+			position: relative;
+			top: -80px;
+			font-weight: bold;
+			width: 1300px;
+			left: 40px;
+            text-shadow: 10px 6px 10px #aeb5b5;
+
+		}
+		.ct12{
+
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+			position: relative;
+			font-size: 20px;
+			top: 10px;
+			left: 340px;
+			
+		}
+		.ct13{
+            position: relative;
+			width: 1200px;
+			top: 60px;
+			left: 340px;
+		}
+		.ct14{
+            position: relative;
+            top: 60px;
+			left: 340px;
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+		}
+		.ct14 img{
+			position: relative;
+			border: 1px solid white;
+			border-radius: 20px;
+			width: 800px;
+			height: 400px;
+			filter: brightness(100%);
+			top: 20px;
+
+		}
+		.ct15{
+            position: relative;
+            top: 90px;
+			left: 320px;
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+			font-style: italic;
+		}
+		
+		.ct17 img{
+			position: relative;
+			border: 1px solid white;
+			border-radius: 20px;
+			width: 800px;
+			height: 400px;
+			filter: brightness(100%);
+			left: 540px;
+			top: 130px;
+
+		}
+		.ct18{
+            position: relative;
+            top: 135px;
+			left: 790px;
+			width: 700px;
+			font-style: italic;
+		}
+        .ct19{
+            position: relative;
+            top: 110px;
+			left: 340px;
+			width: 1200px;
+			justify-content: center;
+		}
+		.ct101{
+			position: relative;
+            top: 150px;
+			left: 340px;
+			width: 1200px;
+		}
+		
+		.ct103 img{
+			position: relative;
+			border: 1px solid white;
+			border-radius: 20px;
+			width: 800px;
+			height: 400px;
+			filter: brightness(100%);
+			left: 540px;
+			top: 190px;
+
+		}
+		.ct104{
+            position: relative;
+            top: 200px;
+			left: 700px;
+			width: 700px;
+			font-style: italic;
+		}
+		.ct105{
+			position: relative;
+            top: 215px;
+			left: 350px;
+			width: 1200px;
+		}
+		
+		.ct2{
+			height: 650px;
+			width: 780px;
+
+		}
+		.ct21{
+			font-size: 26px;
+			font-weight: bold;
+			position: relative;
+			top: 35px;
+			left: 290px;
+		}
+		.ct22{
+			position: relative;
+			top: 25px;
+			left: 435px;
+			display: flex;
+            align-content: space-around;
+            justify-content: space-between;
+            width: 980px;
+
+		}
+		.ct23{
+			position: relative;
+			top: 70px;
+			left: 435px;
+            display: flex;
+            align-content: space-around;
+            justify-content: space-between;
+            width: 980px;
+		}
+		.d{
+			position: relative;
+			width: 460px;
+			top: 30px;
+			border: 1px solid white;
+			border-radius: 25px;
+			height: 230px;
+            
+
+		}
+		.d:hover{
+			
+			box-shadow: 2px 4px 6px rgba(0, 0, 0, .5);
+			transition: 0.5s;
+
+
+		}
+		.d img{
+			border: 1px solid white;
+			border-radius: 25px;
+			width: 460px;
+			height: 230px;
+			filter: brightness(50%);
+		}
+
+		.d1{
+			position: relative;
+			color: white;
+			font-weight: bold;
+			font-size: 22px;
+			text-align: center;
+			top: -80px;
+			left: 29px;
+			width: 420px;
+
+
+		}
+		.cmt{
+			height: 400px;
+			width: 780px;
+		}
+		.cmt1{
+			font-size: 30px;
+			font-weight: bold;
+			position: relative;
+			top: 80px;
+			left: 290px;
+
+		}
+		.cmt2{
+			position: relative;
+			width: 780px;
+			height: 80px;
+			left: 400px;
+			top: 120px;
+		}
+		.cmt3{
+			position: relative;
+			width: 60px;
+			height: 60px;
+			align-content: center;
+			border: 1px solid white;
+			border-radius: 40px;
+			background: gray;
+			color: white;
+			font-size: 30px;
+		}
+		#cmt8 #a7{
+			position: relative;
+			background-color: #273030;
+			color: white;
+        	cursor: pointer;
+        	border: none;
+        	padding:  13px 15px;
+        	border-radius: 30px;
+        	font-size: 20px;
+        	top: -100px;
+        	left: 930px;
+		}
+		.cmt2 input{
+			position: relative;
+			left: 100px;
+			top: -55px;
+			width: 800px;
+			height: 40px;
+			font-size: 19px;
+			border: 1px solid black;
+			border-radius: 15px;
+
+		}
+		.like{
+			display: flex;
+			width: 780px;
+			height: 80px;
+			justify-content: space-between;
+		}
+		.cmt4{
+			position: relative;
+			font-size: 26px;
+			font-weight: bold;
+			left: 290px;
+			top: 200px;
+		}
+		.cmt5{
+			position: relative;
+			font-size: 27px;
+			font-weight: bold;
+			left: 290px;
+			top: 160px;
+
+		}
+		.cmn1{
+			position: relative;
+			left: 30px;
+		}
+		#cmn #cmt0{
+			position: relative;
+			top: 210px;
+			left: 300px;
+        	cursor: pointer;
+        	border: none;
+        	padding:  13px 15px;
+        	border-radius: 30px;
+        	font-size: 30px;
+		}
+		.like i{
+			position: relative;
+			left: -6px;
+		}
+		.footer{
+			height: 200px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+			background: #434545;
+		}
+		.f0{
+			width: 70px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			border: 1px solid white;
+			border-radius: 50px;
+			background: gray;
+			color: white;
+			font-size: 40px;
+		}
+		.f0:hover{
+			width: 70px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			border: 1px solid white;
+			border-radius: 50px;
+			background: #d42811;
+			color: white;
+			font-size: 40px;
+		}
+		.f1{
+            border: 1px solid white;
+            border-radius: 15px;
+            background: gray;
+            width: 95px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+		}
+		.f1:hover{
+            border: 1px solid white;
+            border-radius: 15px;
+            background: #afb0a2;
+            width: 95px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+		}
+    </style>
+		
+</head>
+<body>
+	<div class="cha">
+		<div class="header">
+			<i class="fa-solid fa-user"></i><a href="dangki.html"><p class="h1">Sign up</p></a>
+			<i class="fa-regular fa-user"></i><a href="dangnhap.html"><p class="h1">Sign in</p></a>
+		</div>
+		<div class="a">
+			<a href="index.html"><p class="h">C&H</p></a>
+			<a href="index.html"><p class="a1">HOME</p></a>
+			<a href="post.html"><p class="a1">HOT</p></a>
+			<a href="tranglienhe.html"><p class="a1">CONTACT US</p></a>
+			<p id="a0"><input type="text" placeholder="Bạn đang tìm gì?" id="a9"><button id="a2"><i class="fa-solid fa-magnifying-glass"></i></button></p>
+		</div>
+		<div class="ct1">
+			<img src="7.jpg">
+			<p class="ct11"> LION Championship 15: Thử thách từ các ngoại binh</p>
+			<div class="gt">
+				<div class="gt1">
+					<p class="gt11">edit by C&H</p>
+					<p class="gt11">Friday 12 July 2024 14:30</p>
+				</div>
+				
+			</div>
+			<div class="line"></div>
+			<p class="ct12">LION Championship tiếp tục chứng kiến sự xuất hiện của các võ sĩ ngoại quốc với thử thách đến những suất tranh đai với các tay đấm Việt Nam.</p>
+			<p class="ct13">Sáng ngày 12/7 tại Hà Nội, LION Championship 15 đã tổ chức cân ký cho 14 cặp võ sĩ sẽ thượng đài trong ngày mai 13/7. </p>
+			<p class="ct13">Trước khi buổi cân ký diễn ra, võ sĩ Nguyễn Quốc Huy (Vietnam Fight Club) không đủ điều kiện sức khỏe và buộc phải hủy trận đấu với Nguyễn Văn Trung (Đất cảng Tiger). Trong khi đó, Jesse James Bernal - cựu thủy quân lục chiến Mỹ lố 0,35kg và bị phạt 10% tiền thưởng trong trận đấu với Dương Đức Tùng ở hạng 77kg.</p>
+			
+			<p class="ct14"><img src="b7.jpg"></p>
+			<p class="ct15">Jesse James Bernal bị phạt 10% tiền thi đấu vì quá cân</p>
+			<p class="ct19">LION Championship là sự kiện tiếp theo chứng kiến nhiều võ sĩ ngoại quốc tham gia tranh tài. Ở hạng B (hệ nghiệp dư), nữ võ sĩ Võ Nguyễn Ngọc Linh sẽ chạm trán đối thủ người Anh - Chelsea Leigh Moore tại hạng 52kg.</p>
+            <p class="ct19">Trong đó, hai cuộc đối đầu đáng chú ý nhất thuộc về Hạng A (hệ chuyên nghiệp). Ở hạng cân 84kg, tay đấm từng gây sốt với cú knockout 17 giây Lê Hồng Giang sẽ chạm trán đối thủ đến từ Belarus - Zakhar Dzmitrychenka. Đây là võ sĩ từng đạt nhiều thành tích ở các giải Vật (Wrestling) tại Belarus và vô địch thế giới lứa tuổi U23.</p>
+            <p class="ct17"><img src="b8.jpg"></p>
+			<p class="ct18">Lê Hồng Giang và Zakhar Dzmitrychenka.</p>
+            <div class="ct101">Tại màn so tài tâm điểm, đương kim vô địch hạng 56kg nữ Dương Thị Thanh Bình có màn tái xuất sau một năm chờ đợi đối thủ. Người sẽ thách thức ngôi vương của cô là "bông hồng gai" Bianka Balajti đến từ Hungarry.</div>
+            <div class="ct101">Để có cơ hội thách đấu Thanh Bình, Bianka Balajti đã có liên tiếp 3 trận thắng trước Nguyễn Thị Hương, Lê Nguyễn Khánh Linh và á quân mùa 2022 Nguyễn Thị Uyển Nhi. Khả năng đánh đứng lì lợm cùng sự kết hợp với các kỹ thuật khóa siết khiến Bianka trở thành đối thủ nguy hiểm ở hạng 56kg.</div>
+            <p class="ct103"><img src="b9.jpg"></p>
+			<p class="ct104">Bianka Balajti sẽ thách đấu chức vô địch của Dương Thị Thanh Bình.</p>
+			<div class="ct105">Bên cạnh những trận đấu trên, LION Championship 15 còn có sự góp mặt của một số cặp đấu hấp dẫn. HCV Võ cổ truyền thế giới 2018 Nguyễn Hợp Hải sau trận thua trước Lê Văn Tuần, sẽ phải bảo vệ thứ hạng 10 của mình trước Nguyễn Trọng Hồng Hoàng, tay khóa siết vừa có chiến thắng TKO ở sự kiện LC 13.</div>
+			<div class="ct105">Tại Hạng B, HCV Tán Thủ Đại hội Thể thao toàn quốc Nguyễn Hữu Hân sẽ ra mắt bằng trận đấu với võ sĩ Muay Thái Lê Văn Trình. Ở trận mở màn hạng 60kg nữ, gương mặt vàng của võ thuật Công an Nhân Dân - Lò Thị Tâm sẽ ra mắt trước đối thủ Văn Thị Ngọc Huyền.</div>
+		</div>
+		<div class="cmt">
+			<div class="cmt1">Đánh giá của bạn về bài viết:</div>
+			<div class="cmt2">
+				<div class="cmt3"><i class="fa-solid fa-user"></i></div><input type="text" name="" placeholder ="Bạn đang nghĩ gì..."><div id="cmt8"><button id="a7">Đăng</button></div></div>
+			<div class="like">
+				<div class="cmt5">Bạn có thích bài viết này không?</div>
+				<div class="cmn1">
+					<div class="cmt4">Thích</div>
+					<div id="cmn"><button id="cmt0"><i class="fa-solid fa-thumbs-up"></i></button></div>
+				</div>
+				<div class="cmn1">
+					<div class="cmt4">Không thích</div>
+					<div id="cmn"><button id="cmt0"><i class="fa-solid fa-thumbs-down"></i></button></div>
+				</div>
+			</div>
+		</div>
+		<div class="ct2">
+			<div class="ct21">TIN TỨC KHÁC :</div>
+			<div class="ct22">
+				<a href="chitiet5.html"><div class="d"><img src="6.png">
+					<p class="d1">Nhận định bóng đá Uruguay vs Colombia: Bổn cũ soạn lại</p>
+				    </div></a>
+				<a href="chitiet2.html"><div class="d"><img src="3.jpg">
+				    <p class="d1">Đường đến chung kết Euro 2024 của ĐT Anh</p>
+				   </div></a>
+				
+			</div>
+			<div class="ct23">
+				<a href="chitiet3.html"><div class="d"><img src="4.jpg">
+				    <p class="d1">Euro 2024 tạo sự đoàn kết cho đất nước Tây Ban Nha</p>
+				    </div></a>
+				<a href="chitiet4.html"><div class="d"><img src="5.jpg">
+				    <p class="d1">Tuyển Mỹ "đón" ca chấn thương đầu tiên, nói lời chia tay với Kawhi Leonard</p>
+				    </div></a>
+			</div></div>
+		</div>
+        <div class="footer">
+			<div class="f0"><a href="https://www.facebook.com/linhhhchi.08"><i class="fa-brands fa-facebook"></i></a></div>
+			<div class="f0"><a href="https://www.instagram.com/linhhchi.102/"><i class="fa-brands fa-instagram"></i></a></div>
+			<div class="f0"><a href="https://www.threads.net/@linhhchi.102"><i class="fa-brands fa-threads"></i></a></div>
+			<div class="f0"><a href="https://www.tiktok.com/@lingchii200004"><i class="fa-brands fa-tiktok"></i></a></div>
+			<div class="f1"><a href="dangki.html">SIGN IN</a></div>
+			<div class="f1"><a href="dangnhap.html">SIGN UP</a></div>
+		</div>
+	</div>
+
+</body>
+</html>

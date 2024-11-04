@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+<body>
+    <div id="khoi" align = "center">
+        <h2>Nhập và  tên </h2>
+        <input type="text" name="hovaten " id="hoTen">
+
+        <br>
+        <br>
+        <input type="button" value="Thông báo " id = "thongBao">
+    </div>
+    <script type="text/javascript">
+        var button = document.getElementById('thongBao')
+        button.onclick = function(){
+            var hoTen = document.getElementById('hoTen').value;    
+            alert("Chào mừng " +hoTen+ " đã đến với trang Web")
+        }
+    </script>
+
+
+ <!--  Cách 2  -->
+   
+</body>
+</html>

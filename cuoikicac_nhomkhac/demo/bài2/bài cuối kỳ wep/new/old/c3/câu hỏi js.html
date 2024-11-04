@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>câu hỏi js</title>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center; margin-top: 100px;">Câu Hỏi Javascrip</h1>
+    <br><br>
+  <div style="margin: 0 auto; width: 800px; font-size: 30px;">
+    <p id="đs" style="height: 30px; color: rgb(236, 91, 19);"></p>
+     <div> Câu 1. Trong Javascript sự kiện OnUnload thực hiện khi nào?</div>
+<p>A: Khi bắt đầu chương trình chạy</p>
+<p>B: Khi click chuột</p>
+<p>C: Khi kết thúc một chương trình</p>
+<p>D: Khi di chuyển chuột qua </p>
+<input type="text"  id="c1">
+
+<br>
+<br>
+<p id="đs2" style="height: 30px; color: rgb(236, 91, 19);"></p>
+     <div>Câu 2. Trong Javascript sự kiện Onblur thực hiện khi nào?</div>
+<p>A: Khi một đối tượng trong form mất focus</p>
+<p>B: Khi một đối tượng trong form có focus</p>
+<p>C: Khi di chuyển con chuột qua form</p>
+<p>D: Khi click chuột vào nút lệnh</p>
+<input type="text"  id="c2">
+<br><br>
+<p id="đs3" style="height: 30px; color: rgb(236, 91, 19);"></p>
+     <div> Câu 3. Trong Javascript sự kiện OnMouseOver thực hiện khi nào?</div>
+<p>A: Khi một đối tượng trong form mất focus</p>
+<p>B: Khi di chuyển con chuột qua một đối tượng trong form</p>
+<p>C: Khi một đối tượng trong form có focus</p>
+<p>D: Khi click chuột vào nút lệnh </p>
+<input type="text"  id="c3">
+<br>
+<br>
+<p id="đs4" style="height: 30px;color: rgb(236, 91, 19);"></p>
+     <div> Câu 4. Trong Javascript sự kiện Onclick xảy ra khi nào?</div>
+<p>A: Khi một đối tượng trong form mất focus</p>
+<p>B: Khi một đối tượng trong form có focus</p>
+<p>C: Khi click chuột vào một đối tượng trong form</p>
+<p>D: Khi click chuột vào nút lệnh </p>
+<input type="text"  id="c4">
+<br>
+<br>
+<p id="đs5" style="height: 30px; color: rgb(236, 91, 19);"></p>
+     <div> Câu 5: JavaScript là ngôn ngữ xử lý ở:</div>
+<input type="text"  id="c5">
+<br>
+<br>
+<button type="button" id="kt">kiểm tra đáp án</button>
+<br>
+<br>
+</div> 
+<style>
+    
+</style>
+<script>
+   alert(' điền đáp án vào ô trống ')
+document.getElementById('kt').onclick = function(){
+    var da1= document.getElementById('c1').value;
+    var đs= document.getElementById('đs');
+    
+    if(da1==='c' || da1==='C'){
+      đs.innerHTML='Đúng';
+    }else{
+      đs.innerHTML='Sai đáp án đúng là: C';
+        }
+        if(da1==='' || da1===''){
+      đs.innerHTML='không khả dụng';
+    } 
+
+    var da2= document.getElementById('c2').value;
+    var đs2= document.getElementById('đs2');
+     if(da2==='a' || da2==='A'){
+      đs2.innerHTML='Đúng';
+    }else{
+      đs2.innerHTML='Sai đáp án đúng là: A';
+
+    }
+    if(da2==='' || da2===''){
+      đs2.innerHTML='không khả dụng';
+    }
+
+    var da3= document.getElementById('c3').value;
+    var đs3= document.getElementById('đs3');
+    if(da3==='b' || da3==='B'){
+      đs3.innerHTML='Đúng';
+    }else{
+      đs3.innerHTML='Sai đáp án đúng là: B';
+    }
+    if(da3==='' || da3===''){
+      đs3.innerHTML='không khả dụng';
+    }
+
+    var da4= document.getElementById('c4').value;
+    var đs4= document.getElementById('đs4');
+    if(da4==='d' || da4==='D'){
+      đs4.innerHTML='Đúng';
+    }else{
+      đs4.innerHTML='Sai đáp án đúng là: B';
+    }
+    if(da4==='' || da4===''){
+      đs4.innerHTML='không khả dụng';
+    }
+
+    var da5= document.getElementById('c5').value;
+    var đs5= document.getElementById('đs5');
+    if(da5==='client' || da5==='Client'){
+      đs5.innerHTML='Đúng';
+    }else{
+      đs5.innerHTML='Sai đáp án đúng là: client';
+    }
+    if(da5===''){
+      đs5.innerHTML='không khả dụng';
+    }
+    
+}
+</script>
+</body>
+</html>

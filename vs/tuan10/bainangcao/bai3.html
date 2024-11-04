@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3</title>
+</head>
+<body>
+    <!-- <div style="width: 100% ; height: 80px ; background-color: rgba(63, 71, 71, 0.708) ">
+        <div class = "h1" style="display: flex;">
+            <div class = "h2" style="color: white; margin:0 30px;line-height: 80px;font-size: 30px;">Menu1</div>
+            <div id = "menu2" class = "h2" style="color: white; margin:0 30px;line-height: 80px;font-size: 30px; display: flex; position: relative; :hover .h3{
+                display: block;
+            }">Menu2
+                <div id="submenu1" class = "h3" style="width: 200px ; height: 160px; background-color:rgba(63, 71, 71, 0.708) ;position: absolute; top: 80px; left: -50px; display: none;">
+                    <div class = "h4" style="padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1</div>
+                    <div class = "h4" style="padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1</div>
+                </div>
+                <div id="submenu2" class = "h3" style="width: 200px ; height: 160px; background-color:rgba(63, 71, 71, 0.708) ;position: absolute; top: 80px; left: 150px; display: none;">
+                    <div class = "h4" style="padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1.1</div>
+                    <div class = "h4" style="padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1.1</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script>
+        var a1 = `<div style="width: 100% ; height: 80px ; background-color:#44454b ">`
+        var a2 = `<div class = "h1" style="display: flex;">`
+        var a3 = `<div class = "h2" style="color: white; margin:0 30px;line-height: 80px;font-size: 30px;">Menu1</div>`
+        var a4 = `<div id = "menu2" class = "h2" style="width : 150px ;padding-left: 20px;  color:  white; margin:0 30px;line-height: 80px;font-size: 30px; display: flex; position: relative; :hover .h3{display: block;}">Menu2`
+        
+        // menu con
+        var a5 = `<div id="submenu1" class = "h3" style="width: 190px ; height: 160px; background-color:#44454b ;position: absolute; top: 80px; left: 0px; display: none;">`
+        var a6 = `<div id = "submenu11" class = "h4" style=" width:170px;  padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1</div>`
+        var a7 =`<div class = "h4" style=" width:200px ; padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.2</div>`
+        var a8 = `</div>`
+       // menu con cấp 2 
+        var a9 = `<div id="submenu2" class = "h3" style="width: 200px ; height: 160px; background-color:#44454b ;position: absolute; top: 80px; left: 190px; display: none;">`
+        var a10 = `<div id="submenu2.1" class = "h4" style="padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1.1</div>`
+        var a11 = `<div id="submenu2.2" class = "h4" style="padding-left:20px; border-bottom:1px solid white ;">Sumbit 2.1.2</div>`
+        var a12 = `</div>`;
+        var a13 = `</div>`;
+        var a14 = `</div>`;
+        var a15 = `</div>`;
+        document.write(a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15)
+
+        // Xử lý hover 
+        document.getElementById("menu2").addEventListener("mouseover" ,function(){
+            document.getElementById("submenu1").style.display = "block";
+            document.getElementById("menu2").style.backgroundColor = "#b1b3b9";
+        });
+        document.getElementById("menu2").addEventListener("mouseout" ,function(){
+            document.getElementById("submenu1").style.display = "none";
+            document.getElementById("menu2").style.backgroundColor = "#44454b";
+
+        });
+        document.getElementById("submenu11").addEventListener("mouseover", function() {
+            document.getElementById("submenu2").style.display = "block";
+            document.getElementById("submenu1").style.display = "block"; 
+            document.getElementById("submenu11").style.backgroundColor = "#b1b3b9";
+
+            
+        });
+        document.getElementById("submenu11").addEventListener("mouseout", function() {
+            document.getElementById("submenu2").style.display = "none";
+            document.getElementById("submenu1").style.display = "none"; 
+            document.getElementById("submenu11").style.backgroundColor = "#44454b";
+
+        });
+        document.getElementById("submenu2").addEventListener("mouseover", function() {
+            document.getElementById("submenu2").style.display = "block";
+            document.getElementById("menu2").style.display = "block"; 
+            document.getElementById("menu2").style.backgroundColor = "#44454b";
+            document.getElementById("submenu11").style.backgroundColor = "#b1b3b9";
+
+        });
+        document.getElementById("submenu2").addEventListener("mouseout", function() {
+            document.getElementById("submenu2").style.display = "none";
+           
+        });
+        document.getElementById("submenu2.1").addEventListener("mouseover", function() {
+            document.getElementById("submenu2.1").style.backgroundColor = "#b1b3b9";
+
+        });
+        document.getElementById("submenu2.1").addEventListener("mouseout", function() {
+            document.getElementById("submenu2.1").style.backgroundColor = "#44454b";
+           
+        });
+        document.getElementById("submenu2.2").addEventListener("mouseover", function() {
+            document.getElementById("submenu2.2").style.backgroundColor = "#b1b3b9";
+
+        });
+        document.getElementById("submenu2.2").addEventListener("mouseout", function() {
+            document.getElementById("submenu2.2").style.backgroundColor = "#44454b";
+           
+        });
+        
+    </script>
+</body>
+</html>

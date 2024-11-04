@@ -1,0 +1,70 @@
+table{
+    text-align: center;
+    width: 100%;
+}
+.tb1, .tb3  {
+    
+    border-collapse: collapse; 
+    text-align: center;
+}
+.tb2 {
+    margin: 0 auto;
+}
+
+.tb2 td{
+    border: none;
+}
+.item1 {
+    background-color: aqua;
+    font-size: 25px;
+}
+
+th{
+    text-align: center;
+    font-weight: bold; 
+    padding: 10px; 
+    border: 1px solid black;
+
+    
+}
+.tr4 td{
+    border: none;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+}
+.t1{
+    background-color: aqua;
+    
+ 
+}
+.t2{
+    background-color: burlywood;
+    color: white;
+ 
+}
+.t3{
+    background-color: red;
+ 
+ 
+}
+.t4{
+    background-color: rgb(77, 75, 72);
+    color: white;
+ 
+}
+.t5{
+    background-color: red;
+ 
+}
+.t6{
+    background-color: rgb(113, 108, 100);
+    color: white;
+ 
+}
+.t7{
+    background-color: red; 
+}
+

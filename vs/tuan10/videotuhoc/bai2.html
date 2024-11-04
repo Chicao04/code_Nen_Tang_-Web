@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+<body>
+    <script>
+        // ý a 
+        var dsViec = ["Làm môn Toán","Làm môn Hóa", "Làm môn Lý","Làm môn Sinh","Làm môn Sử"] ;
+        console.log(dsViec);
+        // ý b 
+        function createCV(cvNew){
+            dsViec.push(cvNew)
+        }
+        createCV("bài tập văn");
+        console.log(dsViec);
+        // ý c 
+        function hienthiCongviec(){
+            if (dsViec.length == 0 ){
+                console.log("Không có công việc nào ");
+            }
+            else {
+                console.log("Danh sach việc làm : " )
+                    for (var i = 0 ; i < dsViec.length ; i++ ){
+                        console.log(dsViec[i] + "; ")
+                    }
+            }
+        }
+        hienthiCongviec();
+       // ý d
+        if (dsViec.length >1  ){
+            console.log("Có công việc làm")
+        }
+        else {
+            console.log("Không có công việc nào")
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>trang đăng bài</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .header{
+            background: #273030;
+            height: 55px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .h{
+            margin-top: 10px;
+            background: #e6df1c;
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ad6e26;
+            margin-left: 30px;
+        }
+        .footer {
+            background: #ba2020;
+            height: 75px;
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .h {
+            background: #e6df1c;
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ad6e26;
+            margin-left: 30px;
+        }
+        .a1 {
+            margin-left: 30px;
+        }
+        #text {
+            padding-top: 50px;
+            padding: 30px;
+            text-shadow: 5px 2px 4px grey;
+            font-size: 20px;
+        }
+        #name {
+            width: 400px;
+            height: 400px;
+            margin-left: 30px;
+            margin-top: 10px;
+            border: 2px solid #b1154a;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        button {
+            min-width: 20px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 50px;
+            background-color: #b1154a;
+            color: white;
+            border: 5px solid #b1154a;
+        }
+        .error-message {
+            color: red;
+            margin-left: 30px;
+        }
+        div i{
+            margin-left: 19px;
+        }
+        div a{
+            text-decoration: none;
+            color: white;
+        }
+        .h{
+            background: #e6df1c;
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ad6e26;
+            margin-left: 30px;
+        }
+        .h1{
+            margin-left: 9px;
+        }
+        .a{
+            background: #ba2020;
+            height: 75px;
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .a1{
+            position: relative;
+            left: -50px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <i class="fa-solid fa-user"></i><a href="#"><p class="h1">Sign up</p></a>
+            <i class="fa-regular fa-user"></i><a href="#"><p class="h1">Sign in</p></a>
+        </div>
+        <div class="a">
+            <a href="index.html"><p class="h">C&H</p></a>
+            <a href="index.html"><p class="a1">HOME</p></a>
+            <a href="post.html"><p class="a1">POST</p></a>
+            <a href="tranglienhe.html"><p class="a1">CONTACT US</p></a>
+        </div>
+        <div class="form">
+            <div class="form-group">
+                <label for="name" id="text"><b>Nội dung bài đăng:</b><br></label>
+                <textarea id="name" class="form-input" placeholder="Nội dung bài đăng"></textarea>
+                <div class="error-message"></div>
+            </div>
+            <button onclick="savePost()">Lưu bài đăng</button>
+            <a href="suanoidung.html"><button>Danh sách bài đăng</button></a>
+        </div>
+    </div>
+    <script>
+        function savePost() {
+            let content = document.getElementById('name').value;
+            if (content.trim() === "") {
+                alert('Nội dung bài đăng không được để trống');
+                return;
+            }
+            let posts = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+            const currentDate = new Date();
+            const dateTimeString = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+            posts.push({
+                nd_cauhoi: content,
+                time: dateTimeString
+            });
+            localStorage.setItem('productlist', JSON.stringify(posts));
+            alert('Bài đăng đã được lưu');
+            document.getElementById('name').value = ''; // Clear the textarea
+        }
+    </script>
+</body>
+</html>

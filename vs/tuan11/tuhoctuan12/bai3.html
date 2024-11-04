@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài3</title>
+    <style>
+        *{
+
+            margin: 0;
+            padding : 0; 
+        }
+        div#khoi {
+            width: 1000px;
+            height: 100px;
+            margin: 20px 0;
+            background-color: rgb(56, 55, 54);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thay đổi CSS cho thẻ HTML</h1>
+    <div id = "khoi">
+        <h2>CHÀO MỪNG BẠN ĐẾN VỚI MÔN NỀN TẢNG PHÁT TRIỂN WEB</h2>
+    </div>
+    <input type="button" value="Đổi Background" id = "bg">
+    <input type="button" value="Đổi màu chữ" id = "chu">
+    <script>
+        document.getElementById('bg').onclick = function(){
+            document.getElementById('khoi').style.backgroundColor = "red"
+        }
+        document.getElementById('chu').onclick = function(){
+            document.getElementById('khoi').style.color = "blue"
+        }
+    </script>
+</body>
+</html>

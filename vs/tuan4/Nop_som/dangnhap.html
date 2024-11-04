@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: aqua;
+            display: flex;
+            height: 100vh;
+        }
+
+        header {
+            width: 400px;
+            height: 300px;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            margin:30px auto;
+        }
+        h3 {
+            font-size: 30px;
+
+        }
+        h4 {
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 5px;
+
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        .input-group i {
+            width: 30px;          
+            height: 30px;          
+            border-bottom: 2px solid #ddd; 
+            border-top: 2px solid #ddd; 
+            border-left: 2px solid #ddd; 
+            font-size: 24px;   
+        }
+
+        .input-group input {
+            width: 100%;
+            font-size: 16px;
+            height: 30px;
+            border: 2px solid #ddd;
+            padding-left: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3bd2d7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Đăng Nhập</h3>
+        <h4>Username</h4>
+            <div class="input-group">
+                <i class='bx bxs-user-pin'></i>
+                <input type="email" placeholder="Username">
+            </div>
+        
+        <h4>Password</h4>
+      
+            <div class="input-group">
+                <i class='bx bxs-key'></i>
+                <input type="password" placeholder="Password">
+            </div>
+
+        <button>Login</button>
+    </header>
+</body>
+</html>

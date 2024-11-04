@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>danh sách bài đăng</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .header{
+            background: #273030;
+            height: 55px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .h{
+            margin-top: 10px;
+            background: #e6df1c;
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ad6e26;
+            margin-left: 30px;
+        }
+div i{
+            margin-left: 19px;
+        }
+        div a{
+            text-decoration: none;
+            color: white;
+        }
+        .h{
+            background: #e6df1c;
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ad6e26;
+            margin-left: 30px;
+        }
+        .h1{
+            margin-left: 9px;
+        }
+        .a{
+            background: #ba2020;
+            height: 75px;
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .a1{
+            margin-left: 100px;
+
+        }
+        #a0{
+            position: relative;
+            left: -40px;
+            background: #fff;
+            border-radius: 30px;
+        }
+        p i{
+            position: relative;
+            left: -10px;
+        }
+        #a0 #a9{
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 17px;
+            width: 0px;
+            padding: 0px;
+            transition: 0.5s;
+        }
+         #a0:hover #a9{
+            width: 300px;
+            padding: 10px 15px;
+         }
+        #a0 #a2{
+            background-color: #fff;
+            cursor: pointer;
+            border: none;
+            padding:  13px 15px;
+            border-radius: 30px;
+        }
+        .footer {
+            background: #ba2020;
+            height: 75px;
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .h {
+            background: #e6df1c;
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 50px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ad6e26;
+            margin-left: 30px;
+        }
+        .a1 {
+            margin-left: 30px;
+        }
+        .list_cauhoi {
+            padding: 20px;
+        }
+        .table_csslist {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table_csslist th, .table_csslist td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <i class="fa-solid fa-user"></i><a href="#"><p class="h1">Sign up</p></a>
+            <i class="fa-regular fa-user"></i><a href="#"><p class="h1">Sign in</p></a>
+        </div>
+        <div class="a">
+            <a href="index.html"><p class="h">C&H</p></a>
+            <a href="index.html"><p class="a1">HOME</p></a>
+            <a href="post.html"><p class="a1">POST</p></a>
+            <a href="tranglienhe.html"><p class="a1">CONTACT US</p></a>
+            <p id="a0"><input type="text" placeholder="Bạn đang tìm gì?" id="a9"><button id="a2"><i class="fa-solid fa-magnifying-glass"></i></button></p>
+        </div>
+        <div class="list_cauhoi">
+            <a href="đăng bai.html"><button style="padding: 10px 20px; border-radius: 15px; background-color: aquamarine;">Quay lại</button></a>
+            <h2 style="color: brown;">Danh sách các bài bạn đăng</h2>
+            <table id="table_content" class="table_csslist" cellpadding="30px" cellspacing="20px">
+                <tr>
+                    <th>STT</th>
+                    <th>Nội dung bài đăng</th>
+                    <th>Time</th>
+                    <th>Xóa câu hỏi</th>
+                    <th>Duyệt</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function renderPosts() {
+            var listquiz = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+            var table_content = document.getElementById('table_content');
+            let list_cot = '';
+
+            listquiz.forEach((value, index) => {
+                list_cot += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${value.nd_cauhoi}</td>
+                        <td>${value.time}</td>
+                        <td><button class="delete-button" onclick="deleteRow(${index})">Delete</button></td>
+                    </tr>`;
+            });
+
+            table_content.innerHTML += list_cot;
+        }
+
+        function deleteRow(index) {
+            var listquiz = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+            listquiz.splice(index, 1);
+            localStorage.setItem('productlist', JSON.stringify(listquiz));
+            location.reload(); // Reload the page to update the table
+        }
+
+        window.onload = renderPosts;
+    </script>
+</body>
+</html>

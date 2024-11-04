@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function  createtable(columns, rows){
+            let table = "<table style =' border-collapse:collapse ' >";
+            let FlexMaster = false ;
+            let counter = 1  
+            for(let i = 0 ; i < rows ; i++){
+                table += "<tr>"
+                if(FlexMaster){
+                    for(let j = columns -1 ; j >=0 ; j--){
+                        table += `<td style = " width: 30px;height: 30px; border: 1px solid black ;">${counter+j}</td>`
+                    }
+                }
+                else { 
+                    for(let j  = 0 ; j < columns ;j++ ){
+                        table +=   `<td style = " width: 30px;height: 30px; border: 1px solid black ;">${counter++}</td>`
+                    }
+                }
+                table += "</tr>"; 
+                FlexMaster = !FlexMaster; 
+            }
+
+            table += "</table>";
+            document.write(table)
+        }
+        createtable(5,4)
+    </script>
+</body>
+</html>

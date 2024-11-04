@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:90%;
+            margin: 0 auto;
+        }
+        .item1{
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+
+        }
+        .dau{
+            width: 100%;
+            height: 50px;
+            background-color: aquamarine;
+
+        }
+        .giua{
+            width: 100%;
+        }
+        ul{
+            display:flex;
+        }
+        li{
+            list-style: none;
+            width: 70px;
+            height: 20px;
+            
+        }
+        p{
+            font-size: 20px;
+            text-align: center;
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+        .giua1{
+            background-color: brown;
+            width: 100%;
+            height: 100px;
+        }
+        li{
+            background-color: rgb(106, 238, 58);
+            color: white;
+            margin: 10px 15px ;
+            text-align: center;
+        }
+        li.it1{
+            background-color: aqua;
+        }
+        .cuoi{
+            height: 50px;
+            background-color: pink;
+        }
+        .item2{
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+
+        }
+        .it2 .giua{
+            height: 150px;
+            background-color: rgb(71, 155, 194);
+        }
+        .it2 .giua ul li:nth-child(odd){
+            background-color: orange;
+        }
+        .it2 .giua ul li:nth-child(even){
+            background-color: rgb(194, 10, 10);
+        }
+        .item3{
+            width: 100%;
+            height: 600px;
+        }
+        .item3 .chinh{
+            height: 60px;
+            background-color: rgb(60, 224, 0);
+            line-height: 30px ;
+        }
+        .item3 .chinh2{
+            height: 150px;
+            background-color: rgba(123, 199, 95, 0.763);
+            line-height: 120px ;
+            border: 4px solid rgb(60, 224, 0);
+        }
+        .item3 .cuoi{
+            border: 4px solid rgb(60, 224, 0);
+            height: 400px;
+        }
+        .item3 .cuoi .wrapper{
+            display: flex;
+            width: 100%;
+            height: 350px;
+            border: 3px solid rgb(60, 224, 0);
+
+        }
+        .item3 .cuoi img{
+            width: 347px;
+            border: 3px solid rgb(60, 224, 0);
+           
+        }
+        .ite1 {
+            width: 500px;
+            border: 2px solid rgb(60, 224, 0);
+            color: white;
+            
+        }
+        .ite1 .lop1{
+            display: flex;
+            border: 2px solid rgb(60, 224, 0);
+        }
+        .lop1 .trong1{
+            width: 50%;
+            border: 2px solid rgb(60, 224, 0);
+            
+        }
+        .lop1 .trong2{
+            width: 50%;
+            border: 2px solid rgb(60, 224, 0);
+        }
+        .lop2{
+            border: 2px solid rgb(60, 224, 0);
+            line-height: 200px;
+            height: 287px;
+
+        }
+        .ite2 {
+            width: 509px;
+            border: 2px solid rgb(60, 224, 0);
+            color: white;
+            
+        }
+        .ite2 .lop1{
+            display: flex;
+            border: 2px solid rgb(60, 224, 0);
+        }
+        .chuot{
+            display: flex;
+        }
+        .chuot .itm{
+            width: 347px;
+            border: 2px solid rgb(60, 224, 0);
+            display: flex;
+            height: 45px;
+            
+
+        }
+        .chuot .itm .d1{
+            width: 25%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            border: 2px solid rgb(60, 224, 0);
+           
+        }
+        .chuot .nghi{
+            width: 1050px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border: 2px solid rgb(60, 224, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="item1 ">
+            <div class="dau">
+                <p>Phần đầu trang</p>
+            </div>
+            <div class="giua giua1">
+                <p>Phần Chính của trang</p>
+                <ul>
+                    <li class="it1">item1</li>
+                    <li class="it2">item2</li>
+                    <li class="it3">item3</li>
+                    <li class="it4">item4</li>
+                    <li class="it5">item5</li>
+                    <li class="it6">item6</li>
+                    <li class="it7">item7</li>
+                    <li class="it8">item8</li>
+                    <li class="it9">item9</li>
+                </ul>
+                
+            </div>
+            <div class="cuoi">
+                <p>Phần chân trang</p>
+            </div>
+        </div>
+        <div class="item2 it2">
+            <div class="dau">
+                <p>Phần đầu trang</p>
+            </div>
+            <div class="giua giua2">
+                <p>Phần Chính của trang</p>
+                <ul>
+                    <li class="it1">item1</li>
+                    <li class="it2">item2</li>
+                    <li class="it3">item3</li>
+                    <li class="it4">item4</li>
+                    <li class="it5">item5</li>
+                    <li class="it6">item6</li>
+                    <li class="it7">item7</li>
+                    <li class="it8">item8</li>
+                    <li class="it9">item9</li>
+                </ul>
+                <ul>
+                    <li class="it1">item1</li>
+                    <li class="it2">item2</li>
+                    <li class="it3">item3</li>
+                    <li class="it4">item4</li>
+                    <li class="it5">item5</li>
+                    <li class="it6">item6</li>
+                    <li class="it7">item7</li>
+                    <li class="it8">item8</li>
+                    <li class="it9">item9</li>
+                </ul>
+            </div>
+            <div class="cuoi">
+                <p>Phần chân trang</p>
+            </div>
+        </div>
+        <div class="item3 it3">
+            <div class="dau">
+                <p>Phần đầu trang</p>
+            </div>
+            <div class="giua giua2">
+                <div class="chinh">
+                    <p>Phần Chính của trang</p>
+                </div>
+                <div class="chinh2">
+                    <p>Bonner</p>
+                </div>
+
+                
+            </div>
+            <div class="cuoi">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="./img/anh6.png" alt="">
+                    </div>
+                    <div class="ite1">
+                        <div class="lop1">
+                            <div class = "trong1">
+                                <p>Bản tin 1</p>
+                            </div>
+                            <div class = "trong2">
+                                <p> Xem chi tiết</p>
+                            </div>
+                            
+                        </div>
+                        <div class="lop2">
+                            <p>Nội dung mô tả</p>
+                        </div>
+                    </div>
+                    <div class="ite2">
+                        <div class="lop1">
+                            <div class = "trong1">
+                                <p>Bản tin 1</p>
+                            </div>
+                            <div class = "trong2">
+                                <p> Xem chi tiết</p>
+                            </div>
+                            
+                        </div>
+                        <div class="lop2">
+                            <p>Nội dung mô tả</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="chuot">
+                    <div class="itm">
+                        <div class="d1">add1</div>
+                        <div class="d1">add2</div>
+                        <div class="d1">add3</div>
+                        <div class="d1">add4</div>
+                    </div>
+                    <div class="nghi">
+                        Liên hệ với chúng tôi
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

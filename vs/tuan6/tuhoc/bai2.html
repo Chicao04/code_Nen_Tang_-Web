@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+<body>
+    <div class="b1">
+        <div class="b2" id = "d1"></div>
+        <div class="b2" id = "d2"></div>
+        <div class="b2" id = "d3"></div>
+        <div class="b2" id = "d4"></div>
+    </div>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .b1{
+        margin: 100px 100px;
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        z-index: 1;
+        position: relative;
+    }
+    .b2{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    #d1{
+        background-color:rgb(74, 203, 117);
+        left: -15%;
+        top : -15%; 
+    }
+
+    #d2{
+        background-color:rgb(163, 219, 42);
+        right: -15%;
+        top : -15%; 
+    }
+    #d3{
+        background-color:aqua;
+        left: -15%;
+        bottom : -15%; 
+    }
+    #d4{
+        background-color:rgb(207, 90, 6);
+        right: -15%;
+        bottom:  -15%; 
+    }
+</style>
+</body>
+</html>

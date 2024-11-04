@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    .head{
+        background: #CCFFCD;
+        height: 300px;
+    }
+    .menu {
+        display: flex;
+        background-color: #769EFF;
+        line-height: 60px;
+        width: 500px;
+    }
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        position: relative;
+    }
+    .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 15px
+    }
+    .menu > ul > li > ul {
+        display: none;
+        position: absolute;
+        width: 100px;
+        top: 100%;
+        left: 0;
+        background-color: forestgreen;
+        z-index: 1;
+    }
+    #logo{
+        right: 0;
+        margin: -2px;
+        position: absolute;
+    }
+    .head1{
+        background-color: #FFFDA6;
+    }
+    .box2{
+        right: 0;
+        margin: -5px;
+        position: absolute;
+    }
+    .box4{
+        right: 0;
+        margin: -10px;
+        position: absolute;
+    }
+    .head3{
+        background: #FFFDA6;
+    }
+    .ndung{
+        margin-top: 0px;
+        margin-left: 500px;
+    }
+    .head4{
+        background: #FFFDA6;
+    }
+    .head6{
+        background: #FFD3CA;
+    }
+    </style>
+    <title>LeeAnh</title>
+</head>
+<body>
+    <div class="head">
+        <h1>LeeAnh</h1>
+        <div class="menu">
+            <ul>
+                <li class="trangchu"><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Hàng mới về</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div id="logo">
+            <img src="asusgaming.png" alt="">
+        </div>
+        <br>
+        <input type="button" value="Đăng nhập">
+        <input type="button" value="Đăng kí">
+    </div>
+    <hr>
+    <div class="head1">
+        <h3 style="text-align: center;">Hàng mới về</h3>
+        <div class="box">
+            <center><img src="ipad11.png" alt=""></center>
+            <div class="box2">
+                <img src="iphone12.png" alt=""">
+            </div>
+            <div class="box3">
+                <img src="iphone13.png" alt="">
+            </div>
+            <div class="box4">
+                <img src="iphone14.png" alt="">
+            </div>
+            <div class="box5">
+                <img src="iphone15.png" alt="">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="head3">
+        <h3 style="text-align: center;">Sản phẩm bán chạy</h3>
+        <div>
+            <table border="1" width="200px" cellspacing="0px">
+                <tr height="50px" bgcolor="#DFD4FF">
+                    <td><a href="">Tất cả sản phẩm</a></td>
+                </tr>
+                <tr height="50px">
+                    <td><a href="">Loại 1</a></td>      
+                </tr>
+                <tr height="50px">
+                    <td><a href="">Loại 2</a></td>
+                </tr>
+                <tr height="50px">
+                    <td><a href="">Loại 3</a></td>
+                </tr>
+            </table>
+            <div class="ndung">
+                <table border="0" width="600px">
+                    <tr>
+                        <td >
+                            <img src="iphone15.png" alt="">
+                            <p>Iphone15</p>
+                            <p>Giá: 10.000.000 đ</p>
+                            <input type="button" value="Mua">
+                        </td>
+                        <td>
+                            <img src="iphone15.png" alt="">
+                            <p>Iphone15</p>
+                            <p>Giá: 10.0000.000 đ</p>
+                            <input type="button" value="Mua">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <img src="iphone15.png" alt="">
+                            <p>Iphone15</p>
+                            <p>Giá: 10.000.000 đ</p>
+                            <input type="button" value="Mua">
+                        </td>
+                        <td>
+                            <img src="iphone15.png" alt="">
+                            <p>Iphone15</p>
+                            <p>Giá: 10.0000.000 đ</p>
+                            <input type="button" value="Mua">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="head4">
+        <h3 style="text-align: center;">Về chúng tôi</h3>
+        <table border="0" width="1500px" cellspacing="10px">
+            <tr>
+                <td height="50px">
+                    <img src="avatar.png" alt="">
+                    <p>Họ và tên: Nguyễn Văn A </p>
+                    <p>Chức vụ: Nhân Viên</p>
+                </td>
+                <td>
+                    <img src="avatar.png" alt="">
+                    <p>Họ và tên: Nguyễn Văn B</p>
+                    <p>Chức vụ: Nhân Viên</p>
+                </td>
+                <td>
+                    <img src="avatar.png" alt="">
+                    <p>Video giới thiệu về chúng tôi</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="head5">
+        <h3 style="text-align: center;">Mua hàng</h3>
+    </div>
+    <hr>
+    <div class="head6">
+        <table border="0" width="1500px" cellspacing="10px">
+            <tr>
+                <td height="50px" width="500px">
+                    <p>Thông tin 1</p>
+                    <p><a href="">Link 1</a></p>
+                    <p><a href="">Link 2</a></p>
+                </td>
+                <td height="50px">
+                    <img src="avatar.png" alt="">
+                    <p>Họ và tên: Lê Thế Anh</p>
+                    <p>MSV: 715105020</p>
+                </td>
+                <td height="50px">
+                    <p>Thông tin 2</p>
+                    <p><a href="">Link 1</a></p>
+                    <p><a href="">Link 2</a></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="./Nhapthongtin2.css">
+</head>
+<body>
+    <div class = "menu-header">
+        <div class="container">
+            <div class="wrapper">
+                <nav class="menu">
+                    <div  class = "item ">
+                        <a href="./Nhapthongtin1.html"><p>Thông tin cá nhân</p></a>
+                    </div>
+                    <div class = "item  active">
+                       <a href="./Nhapthongtin2.html"><p>Thông tin trường học</p></a>  
+                    </div>
+                    <div class = "item ">
+                        <a href="./Nhapthongtin3.html"><p>Thông tin liên hệ </p></a>
+                    </div>
+                    <div class = "item ">
+                        <a href="./Nhapthongtin4.html"><p>Thông tin đăng kí </p></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <!-- Previous form sections -->
+
+        <form action="#">
+            <fieldset>
+                <legend>THÔNG TIN TRƯỜNG THPT</legend>
+                <div class="form-group">
+                    <label for="city">Tỉnh/TP <span class="required">*</span></label>
+                    <select id="city" name="city" required>
+                        <option value="" disabled selected>Cần Thơ</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">Quận/Huyện trường THPT <span class="required">*</span></label>
+                    <select id="district" name="district" required>
+                        <option value="" disabled selected>Quận Ninh Kiều</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="school-name">Tên trường THPT <span class="required">*</span></label>
+                    <select id="school-name" name="school-name" required>
+                        <option value="" disabled selected>THPT Châu Văn Liêm</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="grad-year">Năm tốt nghiệp <span class="required">*</span></label>
+                    <select id="grad-year" name="grad-year" required>
+                        <option value="" disabled selected>2023</option>
+                        <!-- Other options -->
+                    </select>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="button" class="back-button" onclick="window.location.href='./Nhapthongtin1.html'">Quay lại</button>
+                <button type="button" class="next-button" onclick="window.location.href='./Nhapthongtin3.html'">Bước tiếp theo</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

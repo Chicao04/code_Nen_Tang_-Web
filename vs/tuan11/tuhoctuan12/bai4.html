@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai4</title>
+    <style>
+        div#br{
+            margin: 10px 500px;
+        }
+    </style>
+</head>
+<body> 
+    <div id = "br">
+        <h1>Thay đổi thuộc tính HTML</h1>
+        <div id="img">
+            <img src="./img/1690091298306.png" alt="" width="300" height="200" id = "anh">
+        </div>
+        <br>
+        <input type="button" value="Đổi Ảnh" id = "bg">
+        <input type="button" value="Quay lại" id = "chu">
+        <script>
+            const anhmoi = './img/html-css-javascript-la-gi.jpg'
+            const anhcu = './img/1690091298306.png'
+
+            document.getElementById("bg").onclick = function(){
+                document.getElementById("anh").src = anhmoi;
+            }
+            document.getElementById("chu").onclick = function(){
+                document.getElementById("anh").src = anhcu;
+            }
+        </script>
+    </div>
+</body>
+</html>

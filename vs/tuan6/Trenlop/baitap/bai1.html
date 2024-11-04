@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <style type="text/css">
+        .tb{
+            border: 2px dotted black;
+            margin: 20px 20px;
+        }
+        table{
+            width: 100%;
+            table-layout: fixed;
+        }
+        .tb1{
+            width: 30px;
+            height: 500px;
+            background-color: pink;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tb2{
+            width: 70px;
+            height: 300px;
+            background-color: rgb(192, 78, 97);
+            overflow: hidden;
+        }
+        .tb3{
+            width: 80px;
+            height: 300px;
+            background-color: rgb(89, 168, 60);
+            overflow:scroll;
+            border-bottom: 2px dotted black;
+            border-right:2px dotted black ;
+        }
+        .tb4{
+            width: 60px;
+            height: 90px;
+            border: 2px dotted black;
+            background-color: pink;
+            overflow: visible;
+            margin-top: -150px;
+            
+        }
+        
+        
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <div class = "tb tb1"> 
+                    Môn học Nền tảng phát triển web cung cấp các kiến thức cơ bản về phương pháp, công cụ và quy trình thiết kế website. Sau khi hoàn thành môn học, người học có khả năng:
+                    • Trình bày được những khái niệm cơ bản, các nguyên tắc trong thiết kế website
+                    • Sử dụng thành thạo các ngôn ngữ, kỹ thuật mô hình và công cụ như một phương tiện để thực hiện thiết kế các trang web cơ bản
+                    • Vận dụng được các chức năng mà các công nghệ thiết kế web cung cấp để thực hiện một sản phẩm website cỡ vừa và nhỏ
+                </div>
+            </td>
+            <td>
+                <div class = "tb tb2">
+                    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth.
+                </div>
+            </td>
+            <td>
+                <div class = " tb3">
+                    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth.
+                </div>
+            </td>
+            <td>
+                <div class = "tb tb4">
+                    
+                        Michaelmas term lately over, and the Lord Chancellor sitting in
+                    
+                   
+                    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth.
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

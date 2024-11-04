@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+.menu-header {
+    background-color: #ff6600; /* Màu cam */
+    color: white;
+    margin-top: 100px;
+    width: 60%;
+    margin: 50px auto;
+    padding: 5px;; 
+
+}
+
+nav{
+    display: flex;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+}
+nav  .item{
+    width: 25%;
+    
+}
+nav .item p{
+    padding-left: 20px ;
+    color :#ffff;
+}
+
+nav .item.active,
+nav .item:hover{
+    background :#45a049; 
+    color : #ffff;
+}
+
+
+
+.form-container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.form-header button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-header .manual-input {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-header .auto-input {
+    background-color: #ddd;
+    color: black;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-header .manual-input.active {
+    border: 2px solid red;
+}
+
+.form-header .auto-input {
+    border: 2px solid yellow;
+}
+
+fieldset {
+    border: 1px solid #007bff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 30%;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 65%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.required {
+    color: red;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-button {
+    background-color: #ccc;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}

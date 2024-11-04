@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng quan về  HTML DOM</title>
+</head>
+<body>
+   <p id = "cntt">Chào mừng bạn đến với khoa công nghệ thông tin</p>
+   <p class = "hnue">Chào mừng bạn đến với Trường đại hộc SP Hà Nội</p>
+   <p class = "hnue">Chào mừng bạn đến với Trường đại hộc SP Hà Nội 2</p>
+    <script type="text/javascript">
+        // Chọn theo id 
+        // var a =  document.getElementById('cntt');
+        // console.log(a.innerText)
+
+        // var a =  new Array(document.getElementById('cntt'));
+        // console.log(a);
+
+        // chọn theo class 
+        // var b = document.getElementsByClassName('hnue');
+        // console.log(b[0])
+
+
+        // chọn theo tên thẻ 
+        // var c = document.getElementsByTagName('p')
+        // console.log(c[2])
+
+        // laay theo selector o css
+        var el =   document.querySelector(".hnue");
+        console.log(el)
+    </script>
+</body>
+</html>

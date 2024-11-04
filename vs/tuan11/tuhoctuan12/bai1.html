@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện trong Dom</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>In ra một thông báo khi click vào button</h1>
+    <!-- <button><a href="#" onclick = "do_something()">Thông báo</a> </button>
+    <script type="text/javascript">
+        function do_something(){
+            alert("chào mừng các bạn đến với trang web")
+        }
+    </script> -->
+    <input type="button" id = "show-btn" value="Thông báo">
+    <script type="text/javascript">
+        function do_something(){
+            alert("chào  bạn đã  đến với khoa CNTT")
+        }
+
+        //
+        var button =  document.getElementById('show-btn')
+        button.onclick = function(){
+            alert("chào mừng các bạn đến với trang web")
+        }
+    </script>
+    
+</body>
+</html>
