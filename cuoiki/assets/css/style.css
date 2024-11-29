@@ -118,7 +118,7 @@ html {
 
 header {
     /* background-image: url('/assets/img/img_header/images.jpg'); */
-    background-color: rgb(175, 253, 253, 0.5);
+
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -174,7 +174,7 @@ header {
         width: 100%;
     }
     #header_nav ul{
-        padding-left: 6em;
+        padding-left: 6%;
     }
     #header_nav li{
         position: relative;

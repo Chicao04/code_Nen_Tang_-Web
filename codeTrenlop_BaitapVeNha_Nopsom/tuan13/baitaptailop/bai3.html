@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài2</title>
+    <style>
+        #thongtin{
+            width: 200px;
+            height: 200px;
+         
+        }
+    </style>
+</head>
+<body>
+    <h2>Bài 3</h2>
+    <input type="text" id = "ten">
+    <input type = "password" id = "pass">
+    <button onclick="luu_ten() ">Lưu tên </button>
+    <br>
+    <h3>Danh sách sinh viên nhập</h3>
+    <div >
+        <ul id ="ds">
+
+        </ul>
+    </div>
+    
+    
+    <script>
+        function luu_ten(){
+            let ten = document.querySelector("#ten").value;
+            let pass = document.querySelector("#pass").value;
+
+            let userList = JSON.parse(localStorage.getItem("ho_te")) || []; 
+            let ul = document.getElementById('ds')
+            const user = {ten , pass}
+            userList.push(user);
+
+            ul.innerHTML =  ""
+            localStorage.setItem("ho_te"  , JSON.stringify(userList)); 
+            for(let index = 0 ; index <userList.length ; index++){
+                ul.innerHTML += "<li>" + "Tài khoản: " + userList[index].ten  + " - "+"Mật Khẩu: " +userList[index].pass  + "</li>"; 
+            }
+        }
+        window.onload = hien_thi();
+        function hien_thi(){
+            let userList = JSON.parse(localStorage.getItem("ho_te")) || []; 
+            let ul = document.getElementById('ds')
+            ul.innerHTML ="";
+            localStorage.setItem("ho_te" , JSON.stringify(userList));
+            for(let index = 0 ; index <userList.length ; index++){
+                ul.innerHTML += "<li>" + "Tài khoản " + userList[index].ten  + " - "+"Mật Khẩu: " +userList[index].pass  + "</li>"; 
+            }
+
+        }
+    </script>
+</body>
+</html>

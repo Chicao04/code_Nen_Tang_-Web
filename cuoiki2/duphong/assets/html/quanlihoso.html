@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/quanlihoso.css">
+    <link rel="stylesheet" href="/assets/css/style_header.css">
+    <link rel="stylesheet" href="/index.html">
+    <link rel="stylesheet" href="/assets/html/dangki.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Quản lí hồ sơ</title>
+</head>
+<body>
+    <header>
+        <!-- Phần thông tin liên lạc và đăng nhập/đăng ký -->
+         <div id="header_contact">
+            <div class="block_infor">
+                <a href="">(028)37252001</a>
+                <span style="opacity: 0.3;">|</span>
+                <a href="">inf@hnue.edu.vn</a>
+            </div>
+            <div class="block_login">
+                <a href="">Bảng vàng thành tích</a>
+                <div id = "th">
+                    <div id="acount">
+                        <a href="#"><div id = "thongtin"></div></a>
+                        <a href="./dangki.html" id = "thongtin1"></a>
+                    </div>
+                    <a href="./dangki.html" id = "dangnhap">Đăng nhập / Đăng kí</a>
+                    
+                </div>
+                
+            </div>
+            <script>
+                window.onload = function(){
+                    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); 
+                    console.log(loggedInUser); // In ra để kiểm tra dữ liệu
+
+                    if (loggedInUser && loggedInUser.email) {
+                        // Hiển thị tên người dùng trong div thongtin
+                        document.getElementById('thongtin').innerText = loggedInUser.email; 
+                        // Ẩn các liên kết đăng ký và đăng nhập
+                        document.getElementById('dangnhap').style.display = 'none'; 
+                        document.getElementById('thongtin1').innerText = '| Đăng xuất'
+                        
+                    } else {
+                        // Nếu chưa đăng nhập, hiển thị thông tin mặc định
+                        document.getElementById("thongtin").innerText = ''; 
+                        documnet.getElementById("thongtin1").innerText = '';
+                        
+                    }
+                }
+
+            </script>
+         </div>
+         <div style="width: 85%; margin: auto;">
+            <hr color="#0e2D80">
+         </div>
+
+        <!-- Phần logo trường, tên trường và slogan -->
+         <div id="header_slogan">
+                <div class="header_name">
+                    <!-- <div class="img_logo"> -->
+                        <img src="/assets/img/img_header/logo_blue.svg" alt="">
+                    <!-- </div> -->
+                    <div class="name_school">
+                        <h2>TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI</h2>
+                        <h3>Hanoi National University of Education</h3>
+                    </div>
+                </div>
+    
+                <div class="title">
+                    <h2>THÔNG TIN TUYỂN SINH NĂM 2024</h2>
+                </div>
+         </div>
+         <div style="width: 85%; margin: auto;">
+            <hr color="#0e2D80">
+         </div>
+         
+        <!-- Phần navigation -->
+         <div id="header_nav">
+            <ul class="menu">
+                <li>
+                    <a href="/index.html">Giới thiệu</a>
+                    <ul class="menu_1">
+                        <li class="menu_1-list">
+                            <a href="">
+                                Tổng quan
+                                <ul class="menu_2 hover_1">
+                                    <li><a href="">Lịch sử truyền thống</a></li>
+                                    <li><a href="">Sứ mệnh, tầm nhìn và giá trị</a></li>
+                                    <li><a href="">Danh hiệu - Khen thưởng</a></li>
+                                    <li><a href="">Bản đồ trường</a></li>
+                                </ul>
+                            </a>
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+                        </li>
+                        <li class="menu_1-list">
+                            <a href="">
+                                Ba công khai
+                                <ul class="menu_2 hover_2">
+                                    <li><a href="">Chất lượng đào tạo</a></li>
+                                    <li><a href="">Cơ sở vật chất</a></li>
+                                    <li><a href="">Đội ngũ cán bộ</a></li>
+                                </ul>
+                            </a>
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+                        </li>
+                        <li><a href="">Cơ cấu tổ chức</a></li>
+                    </ul>
+                </li>
+                <a href="./daotao.html"><li>
+                    Đào tạo
+                    <ul class="menu_1">
+                        <li><a href="">Đào tạo Đại học</a></li>
+                        <li><a href="">Đào tạo Thạc sĩ</a></li>
+                        <li><a href="">Đào tạo Tiến sĩ</a></li>
+                        <li><a href="">Các ngành đào tạo</a></li>
+                    </ul>
+                </li></a>
+                <li>
+                    <a href="./tintuc.html">Tin tức</a>
+                    
+                    <ul class="menu_1">
+                        <li><a href="">Tin tuyển sinh</a></li>
+                        <li><a href="">Tin đào tạo</a></li>
+                        <li><a href="">Lịch công tác tuần</a></li>
+                        <li><a href="">Hoạt động chung</a></li>
+                        <li><a href="">Thông tin & Báo chí</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./diemchuan.html">Điểm chuẩn</a>
+                 
+                    <ul class="menu_1">
+                        <li><a href="">Điểm chuẩn các năm</a></li>
+                        <li><a href="">Thống kê điểm</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./tuyenSinh.html">Xét Tuyển</a>
+                    <ul class="menu_1">
+                        <li class="menu_1-list">
+                            <a href="">
+                                Xét tuyển
+                            </a>
+                            <i class="fa-solid fa-chevron-right arrow"></i>
+                        </li>
+                      
+                    </ul>
+                </li>
+                <li><a href="./quanlihoso.html">Quản lí hồ sơ</a></li>
+            </ul>
+         </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="wrapper">
+                <div class="khoi">
+                    <div class="top">
+                        <h2>QUẢN LÝ HỒ SƠ</h2>
+                        <div class = "gachchan"></div>
+                        <div class = "gachchan i2"></div>
+                        <div class = "gachchan i3"></div>
+                        <div class = "gachchan i4"></div>
+
+                    </div>
+                    <div class="menu">
+                        <div class="khoi3" id = "user">
+                            <div class="khoi32" >
+                                <div class = "vanban">Đăng kí xét hồ sơ </div>
+                                <a href="./student-form.html"><input type="button" value="Đăng kí" ></a>
+                            </div>
+                            <div class="hienthi1"><img src="/assets/img/anhcactrang/New-Employee-Form-PDF.png" alt="">
+                            </div>
+                        </div>
+                        <div class="khoi1 " id = "admin">
+                            <div class="khoi2">
+                                <div class = "vanban">Quản lý hồ sơ </div>
+                                <a href="./admin-approval.html"><input type="button" value="Quản lí" ></a></div>
+                        </div>
+                     
+
+                        <div class="khoi1 ">
+                            <div class="khoi2">
+                                <div class = "vanban">Danh sách hồ sơ</div>
+                                <a href="./student-list.html"><input type="button" value="Hiển thị" ></a></div>
+                        </div>
+                        
+                    </div>
+
+                  
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+   
+    <footer>
+        <div class="top">
+
+            <div class="box">
+                <div class="logo">
+                    <div class="img">
+                        <img src="/assets/img/su-pham.jpeg" alt="">
+                    </div>
+                    <p class = "p1">TRƯỜNG ĐẠI HỌC SƯ PHẠM HÀ NỘI</p>
+                    <p class = "p2">Hanoi National University of Education</p>
+
+                    <div class="inf">
+                        <div class="item">
+                            <i class="fa-solid fa-location-dot"></i><p>136 Xuân Thủy - Cầu Giấy - Hà Nội</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-phone"></i><p>024-37547823   fax: 024-37547971</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-envelope"></i><p>p.hcdn@hnue.edu.vn</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-building"></i><p>http://www.hnue.edu.vn</p>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+            </div>
+            <div class="box1">
+                <h3>GIỚI THIỆU CHUNG </h3>
+                    <ul class = "quick-menu">
+                        <div class="item">
+                            <a href="">Tại sao nên chọn HNUE </a>
+                        </div>
+                        <div class="item">
+                            <a href="">Giới thiệu về trường</a>
+                        </div>
+                        <div class="item">
+                            <a href="">Các khoa & Trung tâm</a>
+                        </div>
+                        <div class="item">
+                            <a href="">Tìm đường đến HNUE</a>
+                        </div>
+                    </ul>    
+            </div>
+            <div class = "box1">
+                <h3>HỌC TẬP TẠI HNUE</h3>
+                <ul class = "quick-menu">
+                    <div class="item">
+                        <a href="">Đào tại Đại học </a>
+                    </div>
+                    <div class="item">
+                        <a href="">Đào tạo Sau Đại học</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Đào tạo - Bồi dưỡng</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Học bổng - Học phí</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box1">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder ="Địa chỉ email">
+                    <button> Nhập tin</button>
+                </form>
+            </div>
+        </div>
+        <div class="buttom">
+            <hr>
+            <p>Copyright 2024 by Trường Đại học Sư phạm Hà Nội</p>
+        </div>
+
+    </footer>
+    <script>
+        window.onload = function(){
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); 
+            console.log(loggedInUser); // In ra để kiểm tra dữ liệu
+
+            if (loggedInUser && loggedInUser.email) {
+                // Hiển thị tên người dùng trong div thongtin
+                document.getElementById('thongtin').innerText = loggedInUser.email; 
+                // Ẩn các liên kết đăng ký và đăng nhập
+                document.getElementById('dangnhap').style.display = 'none'; 
+                document.getElementById('thongtin1').innerText = '| Đăng xuất'
+
+                // Kiểm tra đó là tài khoản admin hay khách
+                if (loggedInUser && (loggedInUser.email === "cao@gmail.com" || loggedInUser.email === "tuan@gmail.com")) {
+                    document.getElementById("admin").style.display = 'flex';
+                    document.getElementById("user").style.display = 'none';
+                } else {
+                    document.getElementById("admin").style.display = 'none';
+                    document.getElementById("user").style.display = 'flex';
+                }
+                                
+                             
+
+            
+                       
+            } else {
+                // Nếu chưa đăng nhập, hiển thị thông tin mặc định
+                document.getElementById("thongtin").innerText = ''; 
+                document.getElementById("thongtin1").innerText = '';
+                
+            }
+        }
+
+    </script>
+    <script src="/assets/javascript/tuyensinh.js"></script>
+</body>
+</html>

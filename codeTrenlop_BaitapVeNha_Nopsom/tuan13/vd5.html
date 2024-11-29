@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ 5</title>
+</head>
+<body>
+    <script>
+        let a = ["Nam", "Hieu", "Cuong"];
+
+        localStorage.setItem("ho_ten", JSON.stringify(a));
+
+        let ho_ten = JSON.parse(localStorage.getItem("ho_ten"));
+        console.log(ho_ten[0]);
+    </script>
+</body>
+</html>

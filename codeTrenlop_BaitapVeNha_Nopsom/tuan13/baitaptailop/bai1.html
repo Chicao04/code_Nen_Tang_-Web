@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+</head>
+<body>
+    <div class="khoi">
+        <input type="text" id = "ten" placeholder="Nhập tên">
+        <button onclick="gui()">Lưu tên</button>
+        <div id ="hienthi"></div>
+    </div>
+    <script>
+        function gui(){
+            let gui = document.querySelector("#ten").value;
+            // console.log(gui)
+            alert(gui)
+            localStorage.setItem("ten", gui)
+            let ten = localStorage.getItem("ten")
+            document.getElementById("hienthi").innerHTML = "Chào, " + ten + " !"; 
+        }
+    </script>
+</body>
+</html>

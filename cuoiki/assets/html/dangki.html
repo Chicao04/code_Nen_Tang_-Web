@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dangki login form</title>
     <link rel="stylesheet" href="/assets/css/dangki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
 </head>
 <body>
@@ -21,7 +23,12 @@
                     <p>hoặc là sử dụng email của bạn để đăng kí</p>
                     <input type="text" id = "signupName" placeholder="Name" required >
                     <input type="email" id = "signupEmail" placeholder="Email" required >
-                    <input type="password" id = "signupPassword" placeholder="Mật Khẩu" required>
+                    <div class="password-container">
+                        <input type="password" id = "signupPassword" placeholder="Mật Khẩu" required>
+                        <span class="eye" onclick="togglePassword()">  
+                            <i class="fa-solid fa-eye"></i>  
+                        </span>  
+                    </div>
                     <button type="sumbit">Đăng kí</button>
             </form>
         </div>
@@ -35,8 +42,14 @@
                     </div>
                     <p>hoặc là sử dụng email</p>
                     <input type="email" id = "loginEmail" name = "email" placeholder="Email" required ="">
-                    <input type="password" id = "loginPassword" name = "password" placeholder="Mật Khẩu" required ="">
+                    <div class="password-container">
+                        <input type="password" id = "loginPassword" placeholder="Mật khẩu" required ="">
+                        <span class="eye" onclick="togglePassword1()">  
+                            <i class="fa-solid fa-eye"></i>  
+                        </span>  
+                    </div>
                     <a href="#">Quên mật khẩu</a>
+                   
                     <button type="sumbit">Đăng Nhập</button>
             </form>
         </div>
@@ -71,6 +84,34 @@
         </ul>
     </div > -->
     <script type="text/javascript">
+         function togglePassword() {  
+            const passwordField = document.getElementById("signupPassword");  
+            const eyeIcon = document.getElementById("eyeIcon");  
+            if (passwordField.type === 'password') {  
+                passwordField.type = 'text';  
+                eyeIcon.classList.remove('fa-eye');  
+                eyeIcon.classList.add('fa-eye-slash');  
+            } else {  
+                passwordField.type = 'password';  
+                eyeIcon.classList.remove('fa-eye-slash');  
+                eyeIcon.classList.add('fa-eye');  
+            }  
+        }  
+
+        function togglePassword1() {  
+            const passwordField = document.getElementById("loginPassword");  
+            const eyeIcon = document.getElementById("eyeIcon");  
+            if (passwordField.type === 'password') {  
+                passwordField.type = 'text';  
+                eyeIcon.classList.remove('fa-eye');  
+                eyeIcon.classList.add('fa-eye-slash');  
+            } else {  
+                passwordField.type = 'password';  
+                eyeIcon.classList.remove('fa-eye-slash');  
+                eyeIcon.classList.add('fa-eye');  
+            }  
+        }
+
         const signUpButtom = document.getElementById('signUp')
         const signInButtom = document.getElementById('signIn')
         const main = document.getElementById('main')
@@ -81,21 +122,54 @@
             main.classList.remove("right-panel-active");
         });
 
-
+        if (!localStorage.getItem("account")) {
+            const adminAccount = {
+                user_0: JSON.stringify({ account: "cao", email: "cao@gmail.com", password: "cao123456" }),
+                user_1: JSON.stringify({ account: "tuan", email: "tuan@gmail.com", password: "tuan123456" })
+            };
+            localStorage.setItem("account", JSON.stringify(adminAccount));
+        }
         // xử lý lưu thông tin đăng ký vào LocalStorge
         const signupForm = document.getElementById('signupForm');
-        signupForm.addEventListener('submit' , (e) =>{
+        signupForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const name = document.getElementById('signupName').value; 
-            const email = document.getElementById('signupEmail').value; 
-            const password = document.getElementById('signupPassword').value; 
-    
-            // Lưu thông tin người dùng vào LocalStorage 
-            const user = {name , email, password};
-            localStorage.setItem('user',JSON.stringify(user)); 
-    
-            alert('Đăng kí thành công! Thông tin đã được lưu')
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            if (!name || !email || !password) {
+                alert("Vui lòng nhập thông tin");
+                return;
+            }
+            if (!email.endsWith("@gmail.com")) {
+                alert("Email không đúng định dạng!");
+                return;
+            }
+            if (password.length < 8) {
+                alert("Mật khẩu phải có ít nhất 8 kí tự!");
+                return;
+            }
+
+            // Lấy danh sách người dùng từ LocalStorage hoặc tạo mới nếu chưa tồn tại
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Kiểm tra sự tồn tại của email
+            const userExists = users.some(user => user.email === email);
+            if (userExists) {
+                alert("Email này đã được đăng ký!");
+                return;
+            }
+
+            // Lưu thông tin người dùng mới vào danh sách
+            const user = { name, email, password };
+            users.push(user);
+
+            // Cập nhật danh sách người dùng trong LocalStorage
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert('Đăng ký thành công! Thông tin đã được lưu');
+            signupForm.reset(); // Xóa dữ liệu trong form
         });
 
         // Xử lí đăng nhập bằng cách kiểm tra LocalStorage 
@@ -106,11 +180,25 @@
             const password = document.getElementById('loginPassword').value;
 
             // Lấy thông tin người dùng từ LocalStorage 
-            const storedUser = JSON.parse(localStorage.getItem('user')); 
-            
-            if(storedUser && storedUser.email === email && storedUser.password === password){
-                alert('Đăng nhập thành công')
-                window.location.href = 'http://127.0.0.1:5500/index.html'; // Chuyển hướng đến trang index.html
+            const users= JSON.parse(localStorage.getItem('users')) || [];
+            const accounts = JSON.parse(localStorage.getItem('account')) || [];
+
+
+            // kiểm tra danh sách người dùng 
+            const userFound = users.find(user => user.email === email && user.password ===password);
+            // Kiểm tra trong danh sách admin
+            const adminFound = Object.values(accounts).find(account => {
+                const admin = JSON.parse(account);
+                return admin.email === email && admin.password === password;
+            });
+
+            if (userFound) {
+                alert('Đăng nhập thành công với tư cách người dùng!');
+                window.location.href = '/index.html'; // Chuyển hướng đến trang index.html
+            } else if (adminFound) {
+                alert('Đăng nhập thành công với tư cách quản trị viên!');
+                window.location.href = '/index.html'; // Chuyển hướng đến trang admin.html
+
             }else {
                 alert('Đăng nhập không thành công')
             }

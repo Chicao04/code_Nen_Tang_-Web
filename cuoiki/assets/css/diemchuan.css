@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
     --primary-color : #ff6b6b;
     --secondary--color : #794afa; 
@@ -9,6 +11,7 @@
     --light-text-color :#7c899a; 
     --border-color :#e5e8ec; 
     --dark-color :#0a021c; 
+    --blue-color:#2874d8 ; 
 
     --font-small:13px ; 
     --font-smaller:11px ; 
@@ -37,6 +40,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    /* background-color: var(--light-bg-color); */
+}
 a{
     text-decoration: none;
 }
@@ -53,6 +64,7 @@ html {
     width: 100%;
     justify-content: space-around;
     padding: 5px 0;    
+    font-size: 15px;
 }
 
 #header_contact .block_infor {
@@ -118,9 +130,9 @@ html {
 
 header {
     /* background-image: url('/assets/img/img_header/images.jpg'); */
-    background-color: rgb(175, 253, 253, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 /* Phần navigation */
@@ -128,7 +140,6 @@ header {
     display: flex;
     width: 80%;
     list-style: none;
-    /* margin-left: 300px; */
     margin: 0 auto;
 }
 .menu > li {
@@ -175,7 +186,7 @@ header {
         width: 100%;
     }
     #header_nav ul{
-        padding-left: 6em;
+        padding-left: 6%;
     }
     #header_nav li{
         position: relative;
@@ -192,6 +203,7 @@ header {
     #header_nav li:hover > ul.sub-menu{
         display: block;
         transition: var(--trans-background-color);
+        z-index: 100;
     }
     
     #header_nav ul.sub-menu a{
@@ -224,30 +236,62 @@ header {
 /* ////////////////////////////////////////////////// */
 main { 
     width: 85%;
-    margin: 20px auto; 
-    /* background-color: aquamarine; */
+    margin: 0px auto; 
     padding: 15px;
 }
-main .back ul {
-    display: flex;
+
+main .background-main-top{
+    position: relative;
+}
+main .background-main-top img{
     width: 100%;
-    height: 30px;
-    background-color: var(--menu--color);
-    line-height: 30px;
-    padding-left: 10px;
+    height: 300px;
+    object-fit: cover; /* sẽ tự động cắt phần thừa của ảnh mà không làm biến dạng, đảm bảo ảnh vừa với khung chứa */
+    object-position: center center; /* Dịch ảnh lên trên */
+    z-index: 1;
 }
 
-main .back ul li{
-    margin-right: 8px;
-    color: #ffffff;
+main .back{
+    position: absolute;
+    width: 280px;
+    height: 80px;
+    background-color: #e5e8ec;
+    top: 59%;
+    left: 20%;
+    border-top: 10px solid #00368c ;
+} 
+main .back p{
+   font-size: 27px;
+   /* font-weight: bold; */
+   line-height: 70px;
+   text-align: center;
+   color: var(--secondary-dark-color);
+} 
+main .gioithieuTieude{
+    display: flex;
 }
-main .back ul li a{
-    color: #ffffff;
+.gioithieuTieude .left{
+    width: 50%;
+    font-size: 30px;
+    padding: 40px 70px ;
+    line-height: 100px;
+    color: var(--menu--color);
 }
-main .back ul li a:hover {
+.gioithieuTieude .right{
+    width: 50%;
+    font-size: 18px;
+    padding: 20px 20px ;
+}
+
+.diem .item h3.os{
+    font-size: 25px;
+    text-align: center;
     color: #d25931;
-    transition: width 0.3s ease-in-out;
 }
+.diem .item h3.os a{
+    color: var(--blue-color);
+}
+
 main .tieude{
     width: 100%;
     margin: 10px  auto;
@@ -262,63 +306,194 @@ main .diem{
     background-color: #ffffff;
     padding-top: 10px ;
 }
-.diem .item{
+.diem .khoi{
     width: 100%;
-    background-color:#ffffff;
-    
-   
-}
-.diem .item h3 {
-    font-size: 20px ;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.diem .item h3 span{
-    font-size: 20px ;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.diem  .item img{
-    margin-left: 50px;
-}
-.diem .item p{
-    white-space: nowrap;
-    width: 800px; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    margin: 5px 5px ;
-}
-table.table1{
-   margin: 0 auto;
-   border: 3px solid #00368c;
-}
-.table1  th{
-    width: 300px;   
-    height: 60px;
-    border: solid #00368c;
-}
-.table1  th.stt{
-    width: 60px;   
-    height: 60px;
-}
-.table1  th.stv{
-    width: 150px;   
-    height: 60px;
-}
-.table1 td {
-  text-align: center;
-  background-color: #00368c;
-  color: white;
-  border: 6px solid #184fa9;
+    margin-top: 50px;
+    background-color: #794afa;
+
 
 }
-.table boreder{
-    color: #00368c;
+.diem .khoi .item{
+    width: 100%;
+    display: flex;
+    height: 550px;
+    background-color: #e5e8ec;
+
 }
-.table1 td.stt{
-    width: 60px;   
-    height: 60px;
+.diem .khoi .item .icon{
+    width: 50%;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; 
+    color: var(--light-text-color);
+    
+
+
+}
+.diem .khoi .item .icon .khoilon{
+    width: 350px;
+
+}
+.diem .khoi .item .icon .khoilon h3{
+    font-size: 24px;
+    width: 420px;
+}
+.diem .khoi .item .icon .khoilon h3 span{
+    color:var(--blue-color);
+}
+
+.diem .khoi .item .icon .khoi1 li{
+    margin-top: 6px;
+    font-size: 8px;
+
+    
+}
+.diem .khoi .item .icon .khoi1 li i{    
+    font-size: 8px;
+    margin-right: 10px;
+
+
+    
+}
+.diem .khoi .item .icon .khoi1 li a{
+    font-size: 16px;
+    color: var(--light-text-color);
+    border-bottom:2px dotted var(--light-text-color) ;
+}
+.diem .khoi .item .icon .khoi1 li a:hover{
+    font-style: italic;
+    color: var(--dark-color);
+}
+.diem .khoi .item .icon .khoilon .foot a{
+
+    margin-top: 10px;
+    display: flex;
+    font-size: 22px;
+    color: var(--light-text-color);
+
+
+}
+.diem .khoi .item .icon .khoilon .foot i{
+    padding-top: 4px;
+    margin-left: 10px;
+
+
+}
+
+.diem .khoi .item .icon ul{
+   width: 350px;
+   /* height: 200px; */
+ 
+
+}
+
+.diem .khoi .item .ican{
+    width: 50%;
+    background-color: #2874d8;
+}
+/* .diem .khoi .item .ican img{
+   
+    background-color: #f0f0f0;
+   
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.ican.show img {
+    opacity: 1;
+    transform: translateY(0);
+} */
+.ican img {
+    display: flex;
+    width: 80%;
+    margin: 6% auto;
+    border-radius: 10px;
+    opacity: 0;  /* Đặt độ mờ (opacity) của phần tử là 0,  */
+    transform: translateY(20px); /* Dịch chuyển phần tử xuống dưới 20px theo trục Y so với vị trí gốc của nó. */
+    transition: opacity 2s ease, transform 0.6s ease; /* Định nghĩa hiệu ứng chuyển đổi (transition) cho hai thuộc tính opacity và transform, với thời gian 2 giây (2s) và tốc độ thay đổi là ease (mượt mà). */
+
+}
+
+.ican.show img {
+    opacity: 1;
+    transform: translateY(0);
+}
+.ican img:hover  {
+    transform: scale(1.1); /* Phóng to ảnh lên 120% */
+}
+
+main .main-bottom{
+    width: 100%;
+
+    margin-top: 40px;
+
+}
+main .main-bottom .khampha{ 
+    text-align: center;
+    font-size: 25px;
+    padding-top :20px ;
+    color: var(--secondary-dark-color);
+    
+
+}
+
+
+main .main-bottom .khoilon{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+
+}
+.khampha .underline {
+    border-radius: 5px;
+    width: 150px; /* Chiều dài của đường gạch */
+    height: 5px; /* Độ dày của đường gạch */
+    background-color: var(--secondary-dark-color); /* Màu sắc của đường gạch */
+    margin: 5px auto; /* Canh giữa đường gạch */
+}
+main .main-bottom .khoilon .khoinho{
+    margin-right:5%;
+
+}
+
+main .main-bottom .khoilon .khoinho .img img{
+    width: 600px;
+    height: 400px;
+
+
+}
+main .main-bottom .khoilon .khoinho .doanvan{
+    width: 600px;
+    height: 200px;
+    background-color: var(--light-bg-color);
+    margin-top: -10px;
+    padding-left: 30px ;
+
+}
+
+main .main-bottom .khoilon .khoinho .doanvan .i1{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    color: var(--menu--color);
+
+}
+main .main-bottom .khoilon .khoinho .doanvan .i2{
+    padding-top: 20px;
+    width: 520px;
+
+}
+main .main-bottom .khoilon .khoinho .doanvan .i3 a{
+    margin-top: 15px;
+    display:flex;
+    font-size: 25px;
+    color: var(--blue-color);
+
+}
+.doanvan .i3 a i{
+    padding-left: 15px;
+    padding-top: 4px;
 }
 footer{
     width: 100% ;
@@ -327,6 +502,7 @@ footer{
     margin-top: 30px ;
     padding: 0px 70px ;
     padding-top: 57px;
+
 
 }
 footer .top{

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài2</title>
+    <style>
+        #thongtin{
+            width: 200px;
+            height: 200px;
+         
+        }
+    </style>
+</head>
+<body>
+    <h2>Bài 4</h2>
+    <input type="text" id = "ten">
+    <input type = "password" id = "pass">
+    <button onclick="luu_ten() ">Lưu tên </button>
+
+    <br>
+    <h3>Danh sách sinh viên nhập</h3>
+    <div >
+        <ul id ="ds">
+
+        </ul>
+    </div>
+    
+    
+    <script>
+        function hienthi(){
+            let ten = document.querySelector("#ten").value;
+            let pass = document.querySelector("#pass").value;
+            let ul = document.getElementById("ds")
+            let userList = JSON.parse(localStorage.getItem("ho_te")) || []; 
+
+            ul.innerHTML=""; 
+
+            for(let index = 0 ; index <userList.length ; index++){
+                ul.innerHTML += `<li>Tài khoản: ${userList[index].ten} - Mật khẩu: ${userList[index].pass} <button onclick="Xoa(${index})" >Xóa</button></li>`;
+            }
+
+        }
+        function luu_ten(){
+            let ten = document.querySelector("#ten").value;
+            let pass = document.querySelector("#pass").value;
+            // Kiểm tra đã điền đầy đủ thông tin chưa 
+            if (ten.trim() === "" || pass.trim() === ""){
+                alert("Vui lòng điền lại thông tin")
+                return; 
+            }
+            let userList = JSON.parse(localStorage.getItem("ho_te")) || []; 
+            let ul = document.getElementById('ds')
+            const user = {ten , pass}
+            userList.push(user);
+
+            localStorage.setItem("ho_te"  , JSON.stringify(userList)); 
+            document.querySelector("#ten").value = ""; 
+            document.querySelector("#pass").value =""; 
+
+            hienthi(); 
+           
+            
+        }
+        function Xoa(index){
+            // Lấy danh sách người dùng từ localStorage
+            let userList = JSON.parse(localStorage.getItem("ho_te")) || [];
+            if( index >= 0 && index < userList.length){
+                // Xóa người dùng tại vị trí index
+                userList.splice(index, 1);
+    
+                // Lưu lại danh sách đã cập nhật vào localStorage
+                localStorage.setItem("ho_te", JSON.stringify(userList));
+                hienthi()
+
+            }
+            window.onload = hienthi; 
+      
+
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vi du 4</title>
+    <style>
+        #hien_thi {
+            width: 50%;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ví dụ 4</h2>
+    <input type="text" name="" id="ho_ten">
+    <button onclick="gui()">Send</button>
+    <div id="hien_thi"></div>
+    <script>
+        function gui() {
+            let input = document.querySelector("#ho_ten").value;
+            alert(input)
+            localStorage.setItem("ho_ten", input);
+            let ten = localStorage.getItem("ho_ten");
+            document.getElementById("hien_thi").innerHTML = ten;
+        }
+
+        // Xử lí khi load lại trang thì không bị mất dữ liệu
+        // function hien_thi() {
+        //     let ten = localStorage.getItem("ho_ten");
+        //     document.getElementById("hien_thi").innerHTML = ten;
+        // }
+        // window.onload = hien_thi;
+    </script>
+</body>
+</html>

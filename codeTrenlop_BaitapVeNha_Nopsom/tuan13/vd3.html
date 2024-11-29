@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Vi du 3</h2>
+    <script>
+        // 1. Đẩy dữ liệu vào Local Storage
+        localStorage.setItem("ho_ten", "Nguyễn Minh Hiếu");
+        localStorage.setItem("tuoi", "19");
+        localStorage.setItem("ho_ten", "Nguyễn Văn A");
+
+        // 2. Lấy dữ liệu ra
+        let a = localStorage.getItem("ho_ten");
+        console.log(a);
+        let b = localStorage.getItem("tuoi");
+        console.log(b);
+
+        // 3. Xóa dữ liệu
+        // localStorage.clear();
+        localStorage.removeItem("ho_ten");
+    </script>
+</body>
+</html>
